@@ -1,0 +1,68 @@
+.sheet {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14.5px;
+  min-width: 640px;
+}
+.table caption {
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 15px 22px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-2);
+}
+.table thead th,
+.blankHead {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--on-dark);
+  background: var(--slate);
+  padding: 12px 22px;
+  font-weight: 500;
+}
+.table td,
+.table tbody th {
+  padding: 13px 22px;
+  border-bottom: 1px solid var(--rule-soft);
+  vertical-align: top;
+  text-align: left;
+}
+.table tbody tr:last-child td,
+.table tbody tr:last-child th {
+  border-bottom: 0;
+}
+.table tbody tr:nth-child(even) {
+  background: var(--paper-2);
+}
+.table tbody th {
+  font-weight: 600;
+  width: 30%;
+}
+.mono {
+  font-family: var(--mono);
+  font-size: 13.5px;
+}
+.cls {
+  font-family: var(--mono);
+  font-weight: 600;
+  color: var(--steel);
+}
+.check {
+  font-family: var(--mono);
+  font-size: 13.5px;
+  color: var(--accent-text);
+  font-weight: 600;
+}

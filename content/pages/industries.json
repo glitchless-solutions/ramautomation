@@ -1,0 +1,139 @@
+{
+  "slug": "industries",
+  "nav": { "label": "Industries" },
+  "seo": {
+    "title": "Industries Served — Aerospace, Space, Medical, Food & Beverage",
+    "description": "Control panels, automation machines and wire harnesses for aerospace and defense, space and launch, entertainment and theme parks, medical device, food and beverage, semiconductor and industrial OEM customers — with the standards, flowdowns and documentation each one requires.",
+    "ogImage": null,
+    "dateModified": "2026-11-21"
+  },
+  "schema": {
+    "type": "CollectionPage",
+    "name": "Industries served by Ram Automation"
+  },
+  "titleBlock": [
+    { "text": "Industries served" },
+    { "text": "Since", "bold": "[[19__]]" },
+    { "text": "ITAR", "bold": "[[registered]]" },
+    { "text": "Brea, CA" },
+    { "text": "Rev", "bold": "2026.1" }
+  ],
+  "sections": [
+    {
+      "type": "hero",
+      "eyebrow": "Who we build for",
+      "title": "We can't show you\ntheir logos. Here's\n*everything else*.",
+      "text": "Most of our customers work under supply agreements that don't permit vendors to display their marks — which is fairly standard once you're building for aerospace, space, and defense programs. We'd rather respect that than decorate a page. So instead of a logo wall, here is what we actually do, for whom, and what it took to be approved to do it.",
+      "ctas": [
+        { "label": "Request a quote", "href": "#rfq", "style": "accent" },
+        { "label": "How we get qualified", "href": "#qualified", "style": "ghost" }
+      ],
+      "facts": {
+        "heading": "By the numbers",
+        "items": [
+          { "term": "In business", "value": "[[__ years]]" },
+          { "term": "Repeat customers", "value": "[[__% of revenue]]" },
+          { "term": "Longest relationship", "value": "[[__ years]]" },
+          { "term": "On-time delivery", "value": "[[__%]]" },
+          { "term": "Customer audits passed", "value": "[[__ since 20__]]" },
+          { "term": "Built in", "value": "Brea, California" }
+        ]
+      }
+    },
+    {
+      "type": "industries",
+      "id": "markets",
+      "_editorNote": "Replace each reference line with your real work. Keep them unnamed but specific — a description a buyer can decode is worth more than a logo they scroll past.",
+      "kicker": "Seven markets",
+      "heading": "Industries we build for",
+      "intro": "Each of these imposes a different requirement on the build. The industry doesn't just describe who buys — it determines the standard, the documentation, and the inspection level.",
+      "items": [
+        { "id": "aerospace-defense", "label": "Market 01", "title": "Aerospace & Defense", "text": "Harnesses, ground support equipment, and test systems for airframe and component suppliers.", "reference": "Class 3 harnesses and functional test equipment for tier-one aerospace suppliers.", "requirements": "IPC/WHMA-A-620 Class 3 · AS9100 flowdowns · ITAR · AS9102 first article" },
+        { "id": "space-launch", "label": "Market 02", "title": "Space & Launch", "text": "Harnesses and control systems for launch vehicle producers and spaceflight research programs.", "reference": "Wire harnesses and test stand controls for a commercial launch provider and a NASA-affiliated research laboratory.", "requirements": "Class 3 · full traceability · retained inspection records · domestic build" },
+        { "id": "entertainment", "label": "Market 03", "title": "Entertainment & Theme Park", "text": "Ride control, show control, and animation panels for attractions and studio production facilities.", "reference": "Ride and show control panels for major Southern California theme park operators.", "requirements": "Safety-rated control architecture · redundancy · guest-safety documentation" },
+        { "id": "medical-device", "label": "Market 04", "title": "Medical Device", "text": "Assembly and test automation with part-level traceability, plus harnesses for capital equipment.", "reference": "Automated assembly and leak test cells with serialized traceability for Class II device manufacturers.", "requirements": "Validation support · IQ/OQ documentation · MES integration · Class 3 harnesses" },
+        { "id": "food-beverage", "label": "Market 05", "title": "Food & Beverage", "text": "Washdown-rated control panels, line controls, and legacy machine retrofits for production plants.", "reference": "NEMA 4X stainless panels and line control retrofits for beverage and packaged food producers.", "requirements": "NEMA 4X · stainless construction · sanitary design · weekend cutover work" },
+        { "id": "semiconductor", "label": "Market 06", "title": "Semiconductor", "text": "Tool controls, gas and chemical delivery automation, and harnesses for fab equipment OEMs.", "reference": "Control panels and harness assemblies for semiconductor capital equipment builders.", "requirements": "SEMI S2 awareness · cleanroom-compatible build · precision documentation" },
+        { "id": "industrial-oem", "label": "Market 07", "title": "Industrial OEM", "text": "Repeat-build panels and kitted harnesses for machine builders shipping their own platforms.", "reference": "Standardized panels and kitted harness sets for OEMs shipping the same machine quarterly.", "requirements": "Repeatable BOM · blanket orders · buffer stock · scheduled releases" }
+      ]
+    },
+    {
+      "type": "tags",
+      "flushTop": true,
+      "_editorNote": "Carried over from the Industries page of the previous WordPress site.",
+      "heading": "Also building for",
+      "items": ["Plastics, extrusion & pelletizing", "Automotive", "Water treatment", "Sheet metal stamping & wire forming", "Electronics & high-speed manufacturing", "General industrial manufacturing", "Pharmaceutical", "Process industries", "Foundries", "Electrical equipment", "Packaging"]
+    },
+    { "type": "divider" },
+    {
+      "type": "trio",
+      "id": "qualified",
+      "eyebrow": "Instead of a logo wall",
+      "heading": "A logo proves someone\nbought something once",
+      "intro": "What actually tells you whether a supplier is any good is the bar they had to clear to get on the approved vendor list — and whether they're still on it years later. Getting approved by an aerospace or space customer is not a purchase order. It's an audit, a quality system review, and a first article process, and you can be removed from the list at any time. That's the part worth knowing about us.",
+      "columns": [
+        {
+          "label": "Proof 01",
+          "title": "We pass customer audits",
+          "text": "Our quality system has been audited on site by customers in aerospace, space, and medical device — and we're still supplying all of them.",
+          "items": ["On-site quality system audits", "Document and revision control", "Calibrated tooling records", "Lot traceability", "Corrective action process", "[[__ audits passed since 20__]]"]
+        },
+        {
+          "label": "Proof 02",
+          "title": "We handle the flowdowns",
+          "text": "The requirements your customer pushes onto you get pushed onto us, and we're set up to absorb them rather than ask for exceptions.",
+          "items": ["AS9100 flowdown requirements", "AS9102 first article inspection", "[[ITAR registered]]", "Certificate of conformance per lot", "RoHS and REACH declarations", "Domestic build — no offshore subcontracting"]
+        },
+        {
+          "label": "Proof 03",
+          "title": "They keep coming back",
+          "text": "The strongest signal we can give you honestly. Nobody re-qualifies a supplier every year for a decade unless the parts keep arriving right.",
+          "items": ["[[__% of revenue from repeat customers]]", "[[Longest relationship: __ years]]", "[[__% on-time delivery]]", "Blanket orders and scheduled releases", "Named contact on every job", "References available on request"]
+        }
+      ],
+      "note": "References available on request — several customers who can't be named publicly will take a call."
+    },
+    {
+      "type": "gallery",
+      "_editorNote": "Shot list for a half-day shop photo session: open panel shot straight on; harness board mid-build; machine on the floor with guarding and HMI; Hoffman ModCenter machining an enclosure; technician crimping or inspecting; finished panel bank before crating. Blur customer nameplates and legend text where required.",
+      "kicker": "The real proof",
+      "heading": "Show the work instead",
+      "intro": "A controls engineer can judge craftsmanship from a photograph in about four seconds. Dressed wire, straight DIN rail, consistent labeling, clean harness boards — that's evidence no competitor can borrow.",
+      "items": [
+        { "src": "/images/work/panels/03.jpg", "alt": "Open control panel with dressed wiring and labeled terminals", "width": 550, "height": 350 },
+        { "src": "/images/work/panels/02.jpg", "alt": "Panel interior with neatly routed wire bundles and terminal blocks", "width": 550, "height": 350 },
+        { "src": "/images/work/automation/07.jpg", "alt": "Automation machine on the floor with guarding and HMI in frame", "width": 550, "height": 350 },
+        { "src": "/images/work/integration/05.jpg", "alt": "Compact automated test cell with HMI and emergency stop", "width": 550, "height": 350 },
+        { "src": "/images/work/automation/08.jpg", "alt": "Multi-lane machine with flexible vacuum hoses and pneumatic tooling", "width": 550, "height": 350 },
+        { "src": "/images/work/panels/06.jpg", "alt": "Fuse holders, contactors and labeled wiring inside a finished panel", "width": 550, "height": 350 }
+      ]
+    },
+    {
+      "type": "rfq",
+      "id": "rfq",
+      "kicker": "Start here",
+      "heading": "Not sure which of the three you need?",
+      "intro": "Plenty of customers come to us for one capability and end up using two or three. Tell us what you're trying to build and we'll tell you which parts we'd handle — including the parts we wouldn't.",
+      "checklist": [
+        { "title": "Your industry", "hint": "It usually determines the standard and documentation required" },
+        { "title": "What you're building or fixing", "hint": "A machine, a panel, a harness, or a whole line" },
+        { "title": "Any customer specs flowing down to you", "hint": "AS9100, ITAR, IPC class, UL requirements" },
+        { "title": "Quantity and schedule", "hint": "One-off, prototype, or repeating production" },
+        { "title": "Drawings, photos, or samples", "hint": "Whatever you have — a phone photo is a fine start" }
+      ],
+      "form": {
+        "subject": "General inquiry",
+        "fields": [
+          [
+            { "name": "industry", "label": "Industry", "type": "select", "options": ["Aerospace & Defense", "Space & Launch", "Entertainment & Theme Park", "Medical Device", "Food & Beverage", "Semiconductor", "Industrial OEM", "Other"] },
+            { "name": "need", "label": "What you need", "type": "select", "options": ["Control panel", "Automation machine", "Wire harness", "Retrofit or integration", "More than one", "Not sure yet"] }
+          ],
+          { "name": "message", "label": "Tell us what you're building", "type": "textarea", "rows": 4, "placeholder": "The application, the problem, any specs flowing down to you…" },
+          { "name": "attachment", "label": "Attach drawings, specs, or photos", "type": "file" }
+        ],
+        "submitLabel": "Send it over",
+        "note": "An engineer reads every submission. If we're not the right shop for it, we'll say so and point you somewhere better."
+      }
+    }
+  ]
+}

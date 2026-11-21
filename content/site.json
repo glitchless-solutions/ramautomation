@@ -1,0 +1,156 @@
+{
+  "_editorNote": "Sitewide settings. Text conventions: *word* = orange accent, **word** = bold, [[value]] = unconfirmed placeholder figure, \\n = line break, [label](href) = link. See content/README.md.",
+
+  "siteUrl": "https://ramautomation.com",
+  "name": "Ram Automation",
+  "legalName": "Ram Automation",
+  "description": "Ram Automation is a UL 508A listed control panel shop and custom automation machine builder in Brea, California. In-house electrical and software engineering, enclosure machining, IPC/WHMA-A-620 wire harness, and retrofit and system integration for aerospace, space, medical device, food and beverage, semiconductor, entertainment and industrial OEM customers.",
+  "foundingYear": null,
+
+  "homePage": "control-panels",
+  "pages": ["control-panels", "automation-machines", "wire-harness", "retrofit-integration", "industries"],
+
+  "brand": {
+    "wordmark": { "left": "RAM", "separator": "/", "right": "AUTOMATION" },
+    "logo": { "src": "/images/brand/ra-logo.png", "alt": "Ram Automation logo", "width": 600, "height": 159 }
+  },
+
+  "contact": {
+    "phone": "(714) 672-4726",
+    "phoneHref": "+17146724726",
+    "fax": "(714) 672-6726",
+    "email": "info@ramautomation.com",
+    "address": {
+      "street": "581 Tamarack Ave",
+      "city": "Brea",
+      "region": "CA",
+      "postalCode": "92821",
+      "country": "US"
+    },
+    "geo": null,
+    "_geoNote": "Optional. Set to { \"latitude\": 00.0000, \"longitude\": -000.0000 } for the shop location to add it to structured data."
+  },
+
+  "areaServed": ["Southern California", "Orange County", "Los Angeles County", "United States"],
+
+  "knowsAbout": [
+    "UL 508A industrial control panels",
+    "UL 698A control panels",
+    "Custom automation machines",
+    "IPC/WHMA-A-620 wire harness and cable assembly",
+    "PLC programming",
+    "HMI development",
+    "VFD and servo commissioning",
+    "Control system retrofit",
+    "PLC-5 and SLC 500 migration",
+    "Siemens S5 migration",
+    "System integration",
+    "EtherCAT",
+    "EtherNet/IP",
+    "PROFINET",
+    "Modbus TCP"
+  ],
+
+  "certifications": ["UL 508A", "IPC/WHMA-A-620", "[[ISO 9001]]", "[[ITAR]]"],
+
+  "sister": {
+    "name": "Ram Aerospace",
+    "description": "Precision CNC machine shop: milling, turning, grinding and honing",
+    "url": "https://www.ramaerospace.com/"
+  },
+
+  "header": {
+    "cta": { "label": "Request a quote", "href": "#rfq" }
+  },
+
+  "footer": {
+    "columns": [
+      {
+        "heading": "Capabilities",
+        "links": [
+          { "label": "Control panels", "href": "/control-panels/" },
+          { "label": "Automation machines", "href": "/automation-machines/" },
+          { "label": "Wire harness", "href": "/wire-harness/" },
+          { "label": "Retrofit & integration", "href": "/retrofit-integration/" },
+          { "label": "Precision machining", "href": "https://www.ramaerospace.com/", "external": true }
+        ]
+      },
+      {
+        "heading": "Industries",
+        "links": [
+          { "label": "Aerospace & defense", "href": "/industries/#aerospace-defense" },
+          { "label": "Space & launch", "href": "/industries/#space-launch" },
+          { "label": "Entertainment", "href": "/industries/#entertainment" },
+          { "label": "Medical device", "href": "/industries/#medical-device" },
+          { "label": "Food & beverage", "href": "/industries/#food-beverage" },
+          { "label": "Semiconductor", "href": "/industries/#semiconductor" }
+        ]
+      },
+      {
+        "heading": "Resources",
+        "links": [
+          { "label": "Automation brochure (PDF)", "href": "/brochures/automation.pdf" },
+          { "label": "Control panel brochure (PDF)", "href": "/brochures/control.pdf" },
+          { "label": "Retrofit brochure (PDF)", "href": "/brochures/retrofitting.pdf" },
+          { "label": "System integration brochure (PDF)", "href": "/brochures/system.pdf" },
+          { "label": "UL 508A buyer's guide", "href": null },
+          { "label": "Careers", "href": null }
+        ]
+      }
+    ],
+    "sisterLabel": "Sister company",
+    "bottomLeft": "© {year} Ram Automation",
+    "bottomRight": "Brea, California — serving Southern California and nationwide"
+  },
+
+  "forms": {
+    "_editorNote": "The site is static, so forms need a form service. Paste its URL into endpoint (e.g. https://formspree.io/f/xxxx). While endpoint is empty, Send opens the visitor's email app addressed to mailto with the form contents. File attachments are only sent when an endpoint is set and that service accepts files.",
+    "endpoint": "",
+    "mailto": "info@ramautomation.com",
+    "contactFields": [
+      [
+        { "name": "name", "label": "Name", "type": "text", "required": true, "autoComplete": "name" },
+        { "name": "company", "label": "Company", "type": "text", "autoComplete": "organization" }
+      ],
+      [
+        { "name": "email", "label": "Email", "type": "email", "required": true, "autoComplete": "email" },
+        { "name": "phone", "label": "Phone", "type": "tel", "autoComplete": "tel" }
+      ]
+    ],
+    "messages": {
+      "sending": "Sending…",
+      "success": "Thanks — it's with an engineer now. You'll hear back shortly.",
+      "error": "Something went wrong sending the form. Please email us at info@ramautomation.com or call (714) 672-4726.",
+      "mailto": "Your email app should open with the details filled in. If it doesn't, email info@ramautomation.com."
+    }
+  },
+
+  "seo": {
+    "titleTemplate": "%s | Ram Automation",
+    "defaultTitle": "Ram Automation — UL 508A Control Panels & Custom Automation, Brea CA",
+    "locale": "en_US",
+    "ogImage": { "src": "/images/brand/og-default.jpg", "width": 1200, "height": 630, "alt": "Ram Automation — control panels, automation machines, wire harness and retrofit in Brea, California" },
+    "themeColor": "#2D3142"
+  },
+
+  "ai": {
+    "_editorNote": "Used to build /llms.txt and robots.txt for AI search engines (GEO).",
+    "allowCrawlers": [
+      "GPTBot", "OAI-SearchBot", "ChatGPT-User",
+      "ClaudeBot", "Claude-SearchBot", "Claude-User",
+      "PerplexityBot", "Perplexity-User",
+      "Google-Extended", "Googlebot", "Bingbot", "Applebot", "Applebot-Extended", "DuckAssistBot"
+    ],
+    "summary": "Ram Automation designs and builds industrial control systems in Brea, California: UL 508A listed control panels (build to print or full design, build and commission), custom single-purpose automation machines, IPC/WHMA-A-620 Class 2 and Class 3 wire harnesses, and retrofit and system integration of existing machines. Electrical engineering (AutoCAD Electrical), PLC/HMI/drive software, enclosure machining on a Hoffman Modification Center, and harness building are all done in house; precision CNC machining is done by sister company Ram Aerospace.",
+    "keyFacts": [
+      "UL 508A listed panel shop — panels ship with the UL label applied in house, no field evaluation needed",
+      "Wire harness built and inspected to IPC/WHMA-A-620 Class 2 and Class 3",
+      "In-house electrical engineers (AutoCAD Electrical) and software engineers (PLC, HMI, VFD/servo)",
+      "PLC platforms: Allen-Bradley, Siemens, Omron, Beckhoff, Mitsubishi; networks: EtherCAT, EtherNet/IP, PROFINET, PROFIBUS, Modbus TCP/RTU",
+      "Legacy migrations: Allen-Bradley PLC-5 and SLC 500, Siemens S5 and S7-300/400, relay logic, analog and DC drives",
+      "PLC and HMI source code delivered unlocked, with full AutoCAD drawing packages",
+      "Building custom automation machines since 2009",
+      "Located at 581 Tamarack Ave, Brea, CA 92821 — serving Southern California and nationwide"
+    ]
+  }
+}

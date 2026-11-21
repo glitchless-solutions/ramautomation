@@ -1,0 +1,194 @@
+{
+  "slug": "automation-machines",
+  "nav": { "label": "Automation Machines" },
+  "seo": {
+    "title": "Custom Automation Machines — Assembly, Test & Inspection",
+    "description": "Custom single-purpose automation machines designed and built in Brea, California since 2009: assembly, test, vision inspection, robotic cells, laser processing, fine wire handling and in-machine X-ray. Installed, proven out and documented with unlocked source code.",
+    "ogImage": null,
+    "dateModified": "2026-11-21"
+  },
+  "schema": {
+    "type": "Service",
+    "name": "Custom automation machine design and build",
+    "serviceType": "Custom industrial automation machinery"
+  },
+  "titleBlock": [
+    { "text": "Capability", "bold": "02" },
+    { "text": "Building machines since", "bold": "2009" },
+    { "text": "In-house CNC" },
+    { "text": "Brea, CA" },
+    { "text": "Rev", "bold": "2026.1" }
+  ],
+  "sections": [
+    {
+      "type": "hero",
+      "eyebrow": "Custom Automation Machines",
+      "title": "The machine doesn't exist yet.\nThat's the *whole point*.",
+      "text": "If you could buy it off a shelf, you would have. We design and build single-purpose machines around one part, one process, and one cycle time — assembly, test, inspection, material handling — then install them, prove them out on your floor, and train the people who run them. We have been building them since 2009.",
+      "ctas": [
+        { "label": "Talk to an engineer", "href": "#rfq", "style": "accent" },
+        { "label": "Is this the right fit?", "href": "#fit", "style": "ghost" }
+      ],
+      "facts": {
+        "heading": "Typical program",
+        "items": [
+          { "term": "Concept to install", "value": "[[16–30 weeks]]", "detail": "depends on scope" },
+          { "term": "Project range", "value": "[[$75k – $1.5M+]]" },
+          { "term": "Typical payback", "value": "[[12–24 months]]" },
+          { "term": "Machined parts", "value": "In house", "detail": "Ram Aerospace CNC" },
+          { "term": "Controls", "value": "In house", "detail": "UL 508A panel shop" },
+          { "term": "Software", "value": "In house", "detail": "PLC / HMI / motion" },
+          { "term": "Specialty", "value": "X-ray, laser", "detail": "fine wire, torque cal" },
+          { "term": "Install support", "value": "On site + remote" }
+        ]
+      }
+    },
+    {
+      "type": "paths",
+      "id": "fit",
+      "kicker": "Qualify it early",
+      "heading": "Custom automation is not always the answer",
+      "intro": "A custom machine is a capital project. Before anyone writes a spec, it's worth being honest about whether the numbers work — so here's the test we walk customers through on the first call, including the cases where we tell people not to do it.",
+      "cards": [
+        {
+          "tag": "Usually worth it when",
+          "title": "The case is strong",
+          "accent": true,
+          "lists": [
+            { "items": ["The part runs at volume and will keep running for 3+ years", "The operation is repetitive, and quality varies operator to operator", "You can't hire for the role, or turnover keeps resetting your training", "The task is ergonomically hard, hot, or otherwise a safety exposure", "Scrap or rework on this step is measurable and annoying", "100% inspection is required and humans can't keep up"] }
+          ]
+        },
+        {
+          "tag": "Usually not worth it when",
+          "title": "Say so early",
+          "lists": [
+            { "items": ["The product changes design every few months", "Annual volume is low and unlikely to grow", "The upstream process isn't stable yet — automate chaos and you get fast chaos", "A fixture, a jig, or a bench-top tool solves 80% of it for 5% of the cost", "The real bottleneck is somewhere else on the line"] }
+          ],
+          "footnote": "If you're in this column, we'll say so. We'd rather build you a $6,000 fixture that works than a $300,000 machine you regret."
+        }
+      ]
+    },
+    { "type": "divider" },
+    {
+      "type": "datasheet",
+      "id": "categories",
+      "_editorNote": "Replace volume and rate figures with actual demonstrated numbers where you add them.",
+      "kicker": "Datasheet",
+      "heading": "What we build",
+      "intro": "Machine categories, with the questions that determine scope for each.",
+      "caption": "Machine categories — Rev 2026.1",
+      "columns": ["Category", "Typical configuration", "What sets the price"],
+      "monoColumns": [1],
+      "rows": [
+        ["Assembly systems", "Single station, dial index, or inline multi-station", "Number of stations and required cycle time"],
+        ["Test & inspection", "Leak, continuity, force-displacement, functional test", "Measurement accuracy and data logging requirements"],
+        ["Vision inspection", "Presence/absence, dimensional, OCR, defect detection", "Feature size, part variation, and reject handling"],
+        ["Robotic cells", "6-axis, SCARA, and collaborative robot integration", "Reach, payload, safety scheme, and end-effector complexity"],
+        ["Material handling", "Conveyors, pick and place, part feeding, palletizing", "Part geometry and orientation control"],
+        ["Marking & traceability", "Laser mark, label apply, serialize, verify", "Read rate requirement and database integration"],
+        ["Torque & calibration", "Assembly, torque calibration, verification, per-unit records", "Number of application-specific recipes and required accuracy"],
+        ["Laser processing", "Ablation, stripping, and marking — including fine wire", "Material, gauge, and continuous versus indexed handling"],
+        ["Fine wire handling", "Down to 50 AWG, continuous spool to 30,000 ft", "Closed-loop tension control and break recovery"],
+        ["Radiation & containment", "In-machine X-ray inspection with verified containment", "Shielding design, interlocks, and leakage verification"],
+        ["Retrofit & rebuild", "New controls and drives on sound mechanical machines", "Condition of the base machine and documentation available"],
+        ["Fixtures & tooling", "Weld fixtures, gauges, assembly aids, EOAT", "Tolerance stack and cycle count"]
+      ]
+    },
+    {
+      "type": "steps",
+      "flushTop": true,
+      "kicker": "Sequence",
+      "heading": "How a machine program runs",
+      "intro": "The two checkpoints that matter most are the design review and the factory acceptance test. Nothing gets built before you approve the design, and nothing ships before it runs your parts in our building.",
+      "items": [
+        { "label": "Stage 01", "title": "Study", "text": "We look at the part, the process, and the numbers. You get a concept and an honest payback estimate before you commit.", "time": "[[1–3 weeks]]" },
+        { "label": "Stage 02", "title": "Design review", "text": "3D model, cycle time budget, safety scheme, and controls architecture — reviewed with your team before a single part is cut.", "time": "[[3–6 weeks]]" },
+        { "label": "Stage 03", "title": "Build", "text": "Parts machined in house, panel built in our UL 508A shop, harnesses to IPC/WHMA-A-620, code written by our own software engineers. Progress photos, not silence.", "time": "[[8–16 weeks]]" },
+        { "label": "Stage 04", "title": "FAT", "text": "The machine runs your parts on our floor, to the agreed rate, with you in the room. Punch list closed before it ships.", "time": "[[1–2 weeks]]" },
+        { "label": "Stage 05", "title": "Install & SAT", "text": "Installed, commissioned, and proven out on your floor. Operator and maintenance training included, not quoted as an extra.", "time": "[[1–2 weeks]]" }
+      ]
+    },
+    { "type": "divider" },
+    {
+      "type": "proof",
+      "_editorNote": "Describe your engineering problem, not the customer's product. The challenge and the solution are yours to publish; part geometry, product names, and process parameters are not.",
+      "kicker": "Selected work",
+      "heading": "The ones that were actually hard",
+      "intro": "Any shop can bolt a cylinder to a frame. These are the projects where the answer wasn't in a catalog — and they're a better description of what we do than a list of machine categories.",
+      "cards": [
+        { "tag": "In-machine X-ray inspection", "title": "Imaging inside a sealed production machine", "text": "Part inspection required X-ray imaging inside an enclosed automated machine. The imaging was the straightforward half — containing it was not. We designed the shielding, enclosure, and fail-safe interlock system so emission stops on any access, then verified leakage at the machine exterior against the regulatory limit.", "metric": { "value": "[[< limit]]", "label": "verified radiation leakage at exterior" } },
+        { "tag": "Laser ablation, fine wire", "title": "50 AWG across a 30,000 ft spool", "text": "Continuous laser ablation on wire down to 50 AWG — about the diameter of a human hair. At that gauge the constraint isn't the laser, it's tension: the wire breaks under almost nothing, and a single break means restringing the entire line. Closed-loop tension control, precise motion, and regulated laser power held the process across the full spool.", "metric": { "value": "30,000 ft", "label": "continuous spool, 50 AWG capable" } },
+        { "tag": "Orthopedic assembly & calibration", "title": "Every unit calibrated to its own spec", "text": "Assembly and torque calibration of orthopedic modules where the target value depends on the application — a spine bolt and a knee implant are not the same specification. Each unit is assembled, calibrated to its application's torque, verified, and recorded, with the recipe selected at the HMI and results logged per serial number.", "metric": { "value": "[[__ recipes]]", "label": "application-specific torque values" } }
+      ]
+    },
+    {
+      "type": "gallery",
+      "flushTop": true,
+      "kicker": "From the shop floor",
+      "heading": "Machines we've built",
+      "items": [
+        { "src": "/images/work/automation/02.jpg", "alt": "Rotary dial-index assembly machine with pneumatic stations arranged around the dial", "width": 550, "height": 350 },
+        { "src": "/images/work/automation/04.jpg", "alt": "Vision inspection station with industrial camera and red ring light above a part fixture", "width": 550, "height": 350 },
+        { "src": "/images/work/automation/01.jpg", "alt": "Multi-station automated assembly cell built on an aluminum extrusion frame", "width": 550, "height": 350 },
+        { "src": "/images/work/automation/07.jpg", "alt": "Guarded automation machine on the shop floor with operator HMI on a swing arm", "width": 550, "height": 350 },
+        { "src": "/images/work/automation/06.jpg", "alt": "Automated feeding and handling machine with conveyor and pneumatic manifold", "width": 550, "height": 350 },
+        { "src": "/images/work/automation/03.jpg", "alt": "3D CAD rendering of a Ram Automation machine frame during design review", "width": 550, "height": 350 }
+      ]
+    },
+    {
+      "type": "stack",
+      "eyebrow": "What ships with the machine",
+      "heading": "No black boxes",
+      "text": "A machine you can't maintain is a machine that becomes someone else's revenue stream. Every program ships with the full documentation set, and the PLC and HMI source code is delivered unlocked. If you want to change it yourself in three years, you can.",
+      "rows": [
+        { "label": "01", "title": "PLC & HMI source", "meta": "Unlocked, commented" },
+        { "label": "02", "title": "AutoCAD schematics", "meta": "UL approved, as-built" },
+        { "label": "03", "title": "CAD files", "meta": "Every designed part" },
+        { "label": "04", "title": "Operator manual", "meta": "Written for your floor" },
+        { "label": "05", "title": "Spare parts list", "meta": "What to stock, and why" },
+        { "label": "06", "title": "Remote diagnostics", "meta": "Optional, 24/7 login" }
+      ]
+    },
+    {
+      "type": "faq",
+      "kicker": "Questions we get weekly",
+      "heading": "Before you spec a machine",
+      "items": [
+        { "q": "How do I justify this to whoever signs the check?", "a": "Usually on labor, scrap, and throughput — in that order. During the study stage we build the payback math with your real numbers: current cycle time, operators on the task, scrap rate, and the fully loaded labor cost. If the payback lands past about 24 months, that's worth knowing before you spend anything, and we'll say so." },
+        { "q": "What happens if my part design changes later?", "a": "Ask us this during design, not after. If you know a change is coming, we can build in adjustability, quick-change tooling, or extra station capacity for a fraction of what it costs to retrofit later. Machines get expensive when flexibility is added after the fact." },
+        { "q": "Who handles the safety and risk assessment?", "a": "We do, as part of the design. Guarding, light curtains, interlocks, and the safety-rated control architecture are designed in from the start and documented — not bolted on after your EHS team sees the machine for the first time." },
+        { "q": "Do you work from our concept, or start from scratch?", "a": "Either. Plenty of customers arrive with a sketch and a cycle time target, and plenty arrive with a part and a problem. We'll tell you honestly which parts of an existing concept we think will work and which we'd change." },
+        { "q": "Can you take over a machine another integrator started?", "a": "Sometimes. It depends on the state of the design, the quality of the documentation, and how far the build got. We'll look at it and give you a straight answer, including if the honest answer is that starting over is cheaper." }
+      ]
+    },
+    {
+      "type": "rfq",
+      "id": "rfq",
+      "kicker": "Start a conversation",
+      "heading": "You don't need a spec to call us",
+      "intro": "Most machine programs start with a part and a frustration, not a requirements document. If you have any of the following, that's enough for a useful first call.",
+      "checklist": [
+        { "title": "A description of the operation today", "hint": "Even a phone video of someone doing it by hand" },
+        { "title": "The part", "hint": "A drawing, a 3D model, or a sample we can look at" },
+        { "title": "Annual volume and expected life", "hint": "Drives the entire economic case" },
+        { "title": "Required cycle time or rate", "hint": "Parts per minute, or shifts you're trying to eliminate" },
+        { "title": "Current labor on the task", "hint": "How many people, how many shifts" },
+        { "title": "Budget range and target date", "hint": "Even a rough range keeps us from designing the wrong machine" }
+      ],
+      "form": {
+        "subject": "Automation machine inquiry",
+        "fields": [
+          { "name": "stage", "label": "What stage are you at?", "type": "select", "options": ["Exploring — is automation worth it?", "Have a concept, need it engineered", "Have a full spec, ready to quote", "Retrofit or rebuild of an existing machine"] },
+          [
+            { "name": "annual_volume", "label": "Annual volume", "type": "text", "placeholder": "parts/year" },
+            { "name": "target_rate", "label": "Target rate", "type": "text", "placeholder": "parts/min" }
+          ],
+          { "name": "message", "label": "Describe the operation", "type": "textarea", "rows": 4, "placeholder": "What happens today, what you want to change, what 'done' looks like…" },
+          { "name": "attachment", "label": "Attach part drawings, models, or video", "type": "file" }
+        ],
+        "submitLabel": "Send it over",
+        "note": "An applications engineer calls you back — not a sales rep working from a script. If we don't think automation is the right move, we'll tell you on that call."
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+.faq {
+  border-top: 1px solid var(--rule);
+}
+.inner {
+  padding: 0;
+}
+.item {
+  border-bottom: 1px solid var(--rule);
+  background: var(--card);
+}
+.item summary {
+  padding: 20px 24px;
+  cursor: pointer;
+  font-family: var(--disp);
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.item summary::-webkit-details-marker {
+  display: none;
+}
+.item summary::after {
+  content: '+';
+  font-family: var(--mono);
+  color: var(--accent-text);
+  font-size: 22px;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+.item[open] summary::after {
+  content: '–';
+}
+.item summary:hover {
+  color: var(--slate);
+}
+.item p {
+  margin: 0;
+  padding: 0 24px 22px;
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 78ch;
+}
+
+@media (max-width: 560px) {
+  .item summary {
+    padding: 18px 16px;
+    font-size: 17px;
+  }
+  .item p {
+    padding: 0 16px 20px;
+  }
+}

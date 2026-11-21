@@ -1,0 +1,1685 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ram Automation — Three Capability Pages (Mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#14181B;
+  --ink2:#2A3238;
+  --paper:#E7EAEC;
+  --card:#FFFFFF;
+  --rule:#C2CACF;
+  --rule-soft:#DBE0E3;
+  --amber:#F5B301;
+  --steel:#1C5A82;
+  --muted:#62707A;
+  --disp:'Barlow Condensed','Arial Narrow',sans-serif;
+  --body:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  --maxw:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* ---------- mockup chrome (not part of the site design) ---------- */
+.chrome{background:#0B0E10;color:#E7EAEC;padding:10px 16px;position:sticky;top:0;z-index:100;border-bottom:2px solid var(--amber)}
+.chrome-in{max-width:var(--maxw);margin:0 auto;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.chrome-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#7C8B95;white-space:nowrap}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tab{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:#1A2024;color:#AEBBC4;border:1px solid #2B343A;padding:7px 12px;cursor:pointer;border-radius:2px}
+.tab:hover{color:#fff;border-color:#43505A}
+.tab[aria-selected="true"]{background:var(--amber);color:#14181B;border-color:var(--amber);font-weight:600}
+.chrome-note{font-family:var(--mono);font-size:10px;color:#F5B301;margin-left:auto;letter-spacing:.04em}
+
+/* ---------- shared shell ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.page{display:none}
+.page.is-on{display:block}
+
+/* site nav */
+.nav{background:var(--ink);color:#fff;border-bottom:1px solid #2B343A}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:28px;min-height:66px;flex-wrap:wrap}
+.brand{font-family:var(--disp);font-weight:700;font-size:24px;letter-spacing:.05em;text-transform:uppercase;line-height:1}
+.brand span{color:var(--amber)}
+.nav-links{display:flex;gap:22px;font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;flex-wrap:wrap}
+.nav-links a{color:#AEBBC4;text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+.nav-links a:hover{color:#fff;border-bottom-color:var(--amber)}
+.nav-links a.on{color:#fff;border-bottom-color:var(--amber)}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:16px}
+.nav-tel{font-family:var(--mono);font-size:13px;color:#fff;text-decoration:none;white-space:nowrap}
+.btn{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:12px 18px;text-decoration:none;border:1px solid transparent;border-radius:2px;cursor:pointer}
+.btn-amber{background:var(--amber);color:#14181B}
+.btn-amber:hover{background:#FFC526}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--ink2)}
+
+/* SIGNATURE: engineering title block strip */
+.titleblock{background:var(--ink2);color:#AEBBC4;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid #3A454C}
+.titleblock .wrap{display:flex;flex-wrap:wrap;gap:0;padding:0 24px}
+.tb-cell{padding:9px 18px 9px 0;margin-right:18px;border-right:1px solid #3A454C;white-space:nowrap}
+.tb-cell:last-child{border-right:0}
+.tb-cell b{color:var(--amber);font-weight:500}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;padding:60px 0 0}
+.hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:start}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:18px}
+h1{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:clamp(38px,5.2vw,68px);line-height:.96;letter-spacing:.005em;margin:0 0 22px}
+h1 em{font-style:normal;color:var(--amber)}
+.hero-sub{font-size:17px;line-height:1.65;color:#C3CDD4;max-width:56ch;margin:0 0 28px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px}
+
+/* key facts panel — replaces generic stat blocks */
+.facts{background:#1D242A;border:1px solid #333E45;border-radius:2px;position:relative}
+.facts::before,.facts::after{content:"";position:absolute;width:10px;height:10px;border-color:var(--amber);border-style:solid}
+.facts::before{top:-1px;left:-1px;border-width:2px 0 0 2px}
+.facts::after{bottom:-1px;right:-1px;border-width:0 2px 2px 0}
+.facts h3{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#7C8B95;margin:0;padding:14px 20px;border-bottom:1px solid #333E45}
+.fact{display:flex;justify-content:space-between;gap:16px;padding:13px 20px;border-bottom:1px solid #262E34;font-size:14px}
+.fact:last-child{border-bottom:0}
+.fact dt{color:#93A2AC;font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;text-transform:uppercase}
+.fact dd{margin:0;text-align:right;font-weight:600;color:#fff}
+.fact dd small{display:block;font-weight:400;color:#7C8B95;font-size:11px;font-family:var(--mono)}
+
+/* dimension rule divider */
+.dim{height:1px;background:var(--rule);position:relative;margin:0}
+.dim::before,.dim::after{content:"";position:absolute;top:-4px;width:1px;height:9px;background:var(--rule)}
+.dim::before{left:0}
+.dim::after{right:0}
+
+section{padding:76px 0}
+.sec-head{margin-bottom:38px;max-width:70ch}
+.sec-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-bottom:12px}
+h2{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:clamp(28px,3.4vw,42px);line-height:1.02;margin:0 0 14px}
+.sec-head p{color:var(--muted);font-size:16.5px;margin:0}
+h3{font-family:var(--disp);font-weight:600;text-transform:uppercase;font-size:22px;letter-spacing:.02em;margin:0 0 10px;line-height:1.1}
+
+/* two-path cards */
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.path{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--ink);padding:30px}
+.path.alt{border-top-color:var(--amber)}
+.path-tag{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.path p{color:var(--muted);font-size:15px;margin:0 0 20px}
+.path h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:0 0 10px;padding-top:16px;border-top:1px solid var(--rule-soft)}
+.path ul{margin:0 0 4px;padding-left:0;list-style:none}
+.path li{font-size:14.5px;padding:5px 0 5px 20px;position:relative;color:var(--ink2)}
+.path li::before{content:"";position:absolute;left:0;top:13px;width:9px;height:1px;background:var(--amber)}
+
+/* industries grid */
+.inds{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.ind{background:var(--card);padding:28px 26px;display:flex;flex-direction:column}
+.ind-n{font-family:var(--mono);font-size:10px;letter-spacing:.13em;color:var(--muted);margin-bottom:12px}
+.ind h3{font-size:21px;margin-bottom:10px}
+.ind>p{font-size:14.5px;color:var(--muted);margin:0 0 18px;flex-grow:1}
+.ind-ref{border-left:2px solid var(--amber);padding:10px 0 10px 14px;font-size:14px;color:var(--ink2);margin-bottom:14px}
+.ind-req{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--steel);border-top:1px solid var(--rule-soft);padding-top:12px}
+
+/* photo placeholder */
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.shot{background:repeating-linear-gradient(45deg,#DDE2E5,#DDE2E5 9px,#E4E8EA 9px,#E4E8EA 18px);border:1px solid var(--rule);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:22px;text-align:center}
+.shot span{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:#5C6B75;line-height:1.6}
+
+/* trio — in-house capability columns */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#333E45;border:1px solid #333E45}
+.trio-col{background:#1D242A;padding:30px 26px}
+.trio-n{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--amber);margin-bottom:14px}
+.trio-col h3{color:#fff;font-size:21px;margin-bottom:12px}
+.trio-col p{color:#A9B6BF;font-size:14.5px;margin:0 0 18px}
+.trio-col ul{list-style:none;margin:0;padding:0;border-top:1px solid #333E45;padding-top:14px}
+.trio-col li{font-family:var(--mono);font-size:12px;color:#C3CDD4;padding:6px 0 6px 16px;position:relative;letter-spacing:.02em}
+.trio-col li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:1px;background:var(--amber)}
+@media (max-width:900px){.trio{grid-template-columns:1fr}}
+
+/* datasheet table — the differentiator */
+.sheet{background:var(--card);border:1px solid var(--rule);overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:600px}
+caption{text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);padding:15px 22px;border-bottom:1px solid var(--rule);background:#F4F6F7}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;text-align:left;color:#fff;background:var(--ink2);padding:12px 22px;font-weight:500}
+td{padding:13px 22px;border-bottom:1px solid var(--rule-soft);vertical-align:top}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even){background:#F7F9FA}
+td:first-child{font-weight:600;width:32%}
+td.num{font-family:var(--mono);font-size:13.5px}
+.cls{font-family:var(--mono);font-weight:600;color:var(--steel)}
+
+/* process sequence — numbered because order is real */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border:1px solid var(--rule);background:var(--card)}
+.step{padding:26px 24px;border-right:1px solid var(--rule-soft)}
+.step:last-child{border-right:0}
+.step-n{font-family:var(--mono);font-size:11px;color:var(--amber);font-weight:600;letter-spacing:.1em;margin-bottom:12px}
+.step h3{font-size:18px;margin-bottom:8px}
+.step p{font-size:14px;color:var(--muted);margin:0 0 12px}
+.step-time{font-family:var(--mono);font-size:11px;color:var(--ink);border-top:1px solid var(--rule-soft);padding-top:10px;letter-spacing:.04em}
+
+/* proof cards */
+.proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.pcard{background:var(--card);border:1px solid var(--rule);padding:28px;display:flex;flex-direction:column}
+.pcard-tag{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--steel);margin-bottom:16px}
+.pcard h3{font-size:20px}
+.pcard p{font-size:14.5px;color:var(--muted);margin:0 0 22px;flex-grow:1}
+.metric{border-top:2px solid var(--amber);padding-top:14px}
+.metric-v{font-family:var(--disp);font-weight:700;font-size:38px;line-height:1;letter-spacing:.01em}
+.metric-l{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+
+/* single-source band */
+.band{background:var(--ink);color:#fff}
+.band-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:center}
+.band h2{color:#fff}
+.band p{color:#C3CDD4;font-size:16.5px}
+.stack{display:grid;gap:1px;background:#333E45;border:1px solid #333E45}
+.stack-row{background:#1D242A;padding:18px 22px;display:flex;gap:18px;align-items:baseline}
+.stack-row b{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:.1em;min-width:38px}
+.stack-row span{font-family:var(--disp);text-transform:uppercase;font-size:19px;font-weight:600;letter-spacing:.02em}
+.stack-row em{font-style:normal;color:#93A2AC;font-size:13.5px;margin-left:auto;text-align:right;font-family:var(--body)}
+
+/* faq */
+.faq{border-top:1px solid var(--rule)}
+.faq details{border-bottom:1px solid var(--rule);background:var(--card)}
+.faq summary{padding:20px 24px;cursor:pointer;font-family:var(--disp);text-transform:uppercase;font-size:19px;font-weight:600;letter-spacing:.02em;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);color:var(--amber);font-size:20px;font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:0;padding:0 24px 22px;color:var(--muted);font-size:15px;max-width:78ch}
+
+/* rfq */
+.rfq{background:#F4F6F7;border-top:3px solid var(--amber)}
+.rfq-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.check{list-style:none;padding:0;margin:22px 0 0}
+.check li{padding:11px 0 11px 30px;border-bottom:1px solid var(--rule-soft);position:relative;font-size:15px}
+.check li::before{content:"";position:absolute;left:0;top:15px;width:13px;height:13px;border:1.5px solid var(--steel);border-radius:2px}
+.check li span{display:block;font-size:13px;color:var(--muted)}
+.form{background:var(--card);border:1px solid var(--rule);padding:30px}
+.form label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.field{margin-bottom:18px}
+.form input,.form select,.form textarea{width:100%;padding:11px 13px;border:1px solid var(--rule);background:#fff;font-family:var(--body);font-size:15px;border-radius:2px}
+.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--steel);outline-offset:1px;border-color:var(--steel)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-note{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:14px;line-height:1.5}
+
+/* footer */
+footer{background:var(--ink);color:#93A2AC;padding:52px 0 30px;font-size:14px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;padding-bottom:34px;border-bottom:1px solid #2B343A}
+footer h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#fff;margin:0 0 14px}
+footer a{color:#93A2AC;text-decoration:none;display:block;padding:4px 0}
+footer a:hover{color:var(--amber)}
+.f-bot{padding-top:22px;font-family:var(--mono);font-size:11px;letter-spacing:.05em;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.certs{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.cert{font-family:var(--mono);font-size:10px;letter-spacing:.08em;border:1px solid #3A454C;padding:6px 10px;color:#C3CDD4}
+
+.ph{background:rgba(245,179,1,.18);border-bottom:1px dashed var(--amber);padding:0 3px}
+
+/* motion */
+.rev{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.rev.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:900px){
+  .hero-grid,.band-grid,.rfq-grid,.paths{grid-template-columns:1fr;gap:34px}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .step{border-right:0;border-bottom:1px solid var(--rule-soft)}
+  section{padding:56px 0}
+  .hero{padding-top:44px}
+}
+@media (max-width:560px){
+  .f-grid{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr}
+  .nav-right{width:100%;margin-left:0}
+}
+</style>
+
+<!-- ============ MOCKUP CHROME ============ -->
+<div class="chrome">
+  <div class="chrome-in">
+    <span class="chrome-label">Mockup — Ram Automation</span>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-go="p-panel">01 / Control Panels</button>
+      <button class="tab" role="tab" aria-selected="false" data-go="p-machine">02 / Automation Machines</button>
+      <button class="tab" role="tab" aria-selected="false" data-go="p-harness">03 / Wire Harness</button>
+      <button class="tab" role="tab" aria-selected="false" data-go="p-retrofit">04 / Retrofit &amp; Integration</button>
+      <button class="tab" role="tab" aria-selected="false" data-go="p-industries">Industries &amp; Proof</button>
+    </div>
+    <span class="chrome-note">Highlighted figures = placeholders — replace with your real data</span>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PAGE 01 — UL 508A CONTROL PANELS                              -->
+<!-- ============================================================ -->
+<div class="page is-on" id="p-panel">
+
+  <nav class="nav"><div class="nav-in">
+    <div class="brand">RAM<span>/</span>AUTOMATION</div>
+    <div class="nav-links">
+      <a href="#" class="on">Control Panels</a>
+      <a href="#">Automation Machines</a>
+      <a href="#">Wire Harness</a>
+      <a href="#">Retrofit &amp; Integration</a>
+      <a href="#">Industries</a>
+    </div>
+    <div class="nav-right">
+      <a class="nav-tel" href="tel:7146724726">(714) 672-4726</a>
+      <a class="btn btn-amber" href="#rfq-1">Request a quote</a>
+    </div>
+  </div></nav>
+
+  <div class="titleblock"><div class="wrap">
+    <div class="tb-cell">Capability <b>01</b></div>
+    <div class="tb-cell">UL 508A Listed Shop — File <b class="ph">#E______</b></div>
+    <div class="tb-cell">ISO <b class="ph">9001:2015</b></div>
+    <div class="tb-cell">Hoffman <b>ModCenter</b></div>
+    <div class="tb-cell">Brea, CA</div>
+    <div class="tb-cell">Rev <b>2026.1</b></div>
+  </div></div>
+
+  <header class="hero"><div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Industrial Control Panels</div>
+        <h1>Built to your print.<br>Or <em>engineered</em> from your process.</h1>
+        <p class="hero-sub">We are a UL 508A listed panel shop in Brea, California with electrical and software engineers on staff. Send us a complete drawing package and we build to print. Send us a process and no drawings, and we do the electrical design in AutoCAD, modify the enclosure on our Hoffman Modification Center, build and test the panel, then write and commission the PLC, HMI, and drive code that runs it.</p>
+        <div class="hero-cta">
+          <a class="btn btn-amber" href="#rfq-1">Start an RFQ</a>
+          <a class="btn btn-ghost" href="#sheet-1">See capability specs</a>
+        </div>
+      </div>
+      <div class="facts">
+        <h3>At a glance</h3>
+        <dl style="margin:0">
+          <div class="fact"><dt>Build to print</dt><dd class="ph">4–6 weeks<small>typical, stock components</small></dd></div>
+          <div class="fact"><dt>Design + build</dt><dd class="ph">8–12 weeks<small>includes engineering</small></dd></div>
+          <div class="fact"><dt>Engineering</dt><dd>In house<small>electrical + software</small></dd></div>
+          <div class="fact"><dt>Enclosure mod</dt><dd>In house<small>Hoffman ModCenter</small></dd></div>
+          <div class="fact"><dt>Panel current</dt><dd class="ph">up to 1200 A</dd></div>
+          <div class="fact"><dt>SCCR</dt><dd class="ph">up to 65 kA</dd></div>
+          <div class="fact"><dt>Commissioning</dt><dd>Turnkey<small>on site or remote</small></dd></div>
+          <div class="fact"><dt>Quote turnaround</dt><dd class="ph">2 business days</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div style="height:60px"></div>
+  </div></header>
+
+  <section><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Two ways to work with us</div>
+      <h2>Pick the path that matches what you already have</h2>
+      <p>Most panel shops quote the same way no matter what you send them. We don't — because the two jobs carry very different risk, and you should only pay for the engineering you actually need.</p>
+    </div>
+    <div class="paths rev">
+      <div class="path">
+        <div class="path-tag">Path A</div>
+        <h3>Build to print</h3>
+        <p>You have a released drawing package and a bill of materials. We fabricate, wire, label, test, and apply the UL 508A label. No design charges.</p>
+        <h4>You send</h4>
+        <ul>
+          <li>Schematics and panel layout</li>
+          <li>Bill of materials with part numbers</li>
+          <li>Enclosure rating and dimensions</li>
+          <li>Quantity and required date</li>
+        </ul>
+        <h4>You get back</h4>
+        <ul>
+          <li>Tested panel with UL 508A label</li>
+          <li>As-built drawings and test report</li>
+          <li>Component traceability records</li>
+        </ul>
+      </div>
+      <div class="path alt">
+        <div class="path-tag">Path B</div>
+        <h3>Design, build and commission</h3>
+        <p>You have a process, a machine, or a problem — not a drawing set. Our electrical and software engineers do the design in AutoCAD, size and derate the components, build the panel, then write and commission the code that runs it.</p>
+        <h4>You send</h4>
+        <ul>
+          <li>Load list or equipment being controlled</li>
+          <li>I/O count and sequence of operation</li>
+          <li>Environment: indoor, washdown, hazardous</li>
+          <li>Preferred PLC and network, if you have one</li>
+        </ul>
+        <h4>You get back</h4>
+        <ul>
+          <li>Everything in Path A, plus</li>
+          <li>AutoCAD schematics, one-lines, BOM, heat and SCCR calculations</li>
+          <li>PLC, HMI and drive code — written, tested, unlocked</li>
+          <li>On-site commissioning and operator training</li>
+        </ul>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="band" style="padding:76px 0"><div class="wrap">
+    <div class="sec-head rev" style="max-width:76ch">
+      <div class="eyebrow">Nothing subcontracted</div>
+      <h2 style="color:#fff">Drawing, metal, and code —<br>all of it happens here</h2>
+      <p style="color:#C3CDD4">Most panel shops do one of these three well and buy the other two. That's why schedules slip: the enclosure comes back from a fab shop cut wrong, or the panel is finished and then sits waiting on a programmer who has never seen it. We do all three in this building, and the same people stay on your job from the first drawing to the day it runs.</p>
+    </div>
+    <div class="trio rev">
+      <div class="trio-col">
+        <div class="trio-n">Discipline 01</div>
+        <h3>Electrical design</h3>
+        <p>Electrical engineers on staff producing a released drawing package you own — not a marked-up sketch handed to the floor.</p>
+        <ul>
+          <li>AutoCAD Electrical schematics</li>
+          <li>One-line and power distribution</li>
+          <li>Panel layout and wire routing</li>
+          <li>Component sizing and derating</li>
+          <li>Heat rise calculations</li>
+          <li>SCCR per UL 508A Supp. SB</li>
+          <li>Bill of materials</li>
+        </ul>
+      </div>
+      <div class="trio-col">
+        <div class="trio-n">Discipline 02</div>
+        <h3>Software &amp; commissioning</h3>
+        <p>Software engineers who write the code, prove it on the bench against your sequence, then commission it on your floor.</p>
+        <ul>
+          <li>PLC programming, multi-platform</li>
+          <li>HMI development and screens</li>
+          <li>VFD and servo setup and tuning</li>
+          <li>EtherCAT</li>
+          <li>EtherNet/IP</li>
+          <li>PROFINET / PROFIBUS</li>
+          <li>Modbus TCP and RTU</li>
+          <li>On-site startup and training</li>
+        </ul>
+      </div>
+      <div class="trio-col">
+        <div class="trio-n">Discipline 03</div>
+        <h3>Enclosure fabrication</h3>
+        <p>A Hoffman Modification Center in house, so cutouts are machined to the drawing instead of hole-sawed at a bench.</p>
+        <ul>
+          <li>Hoffman Modification Center</li>
+          <li>CNC cutouts and knockouts</li>
+          <li>Drilling and tapping</li>
+          <li>Back panel fabrication</li>
+          <li>Legend and nameplate engraving</li>
+          <li>Enclosure rating preserved</li>
+          <li>Precision CNC via Ram Aerospace</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-family:var(--mono);font-size:12px;color:#93A2AC;margin-top:20px;letter-spacing:.02em">Modifying an enclosure incorrectly voids its NEMA rating. Machining it on a ModCenter to the released drawing is how the rating survives the modification.</p>
+  </div></section>
+
+  <div class="dim"></div>
+
+  <section id="sheet-1"><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Datasheet</div>
+      <h2>Capability specifications</h2>
+      <p>The numbers engineers ask for on the first call. If your requirement sits outside a range below, say so in the RFQ — several of these are soft limits.</p>
+    </div>
+    <div class="sheet rev">
+      <table>
+        <caption>Control panel capability — Rev 2026.1</caption>
+        <thead><tr><th>Parameter</th><th>Capability</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Listing</td><td class="num">UL 508A, UL 698A</td><td>Label applied in-house; no field evaluation needed</td></tr>
+          <tr><td>Panel ampacity</td><td class="num ph">Up to 1200 A</td><td>Larger available as a multi-section lineup</td></tr>
+          <tr><td>Short circuit rating</td><td class="num ph">Up to 65 kA SCCR</td><td>Calculated per UL 508A Supplement SB</td></tr>
+          <tr><td>Voltage</td><td class="num">120 / 208 / 240 / 480 / 600 VAC · 24 VDC</td><td>Single and three phase</td></tr>
+          <tr><td>Enclosure types</td><td class="num">NEMA 1, 3R, 4, 4X, 12</td><td>Painted steel, 304/316 stainless, non-metallic</td></tr>
+          <tr><td>Electrical design</td><td class="num">AutoCAD Electrical — in house</td><td>Schematics, one-lines, layouts, BOM; drawings delivered to you</td></tr>
+          <tr><td>Enclosure modification</td><td class="num">Hoffman Modification Center</td><td>CNC cutouts, drilling, tapping, engraving — rating preserved</td></tr>
+          <tr><td>PLC platforms</td><td class="num">Allen-Bradley, Siemens, Omron, Beckhoff, Mitsubishi</td><td>Migrations from legacy PLC-5, SLC 500, S5</td></tr>
+          <tr><td>HMI / SCADA</td><td class="num">FactoryTalk, WinCC, Ignition</td><td>Source code delivered unlocked</td></tr>
+          <tr><td>Industrial networks</td><td class="num">EtherCAT, EtherNet/IP, PROFINET, PROFIBUS, Modbus TCP/RTU</td><td>Multi-protocol architectures and gateway integration</td></tr>
+          <tr><td>Drives</td><td class="num">VFD and servo — programmed, tuned, commissioned</td><td>Line reactors and harmonic filters sized in house</td></tr>
+          <tr><td>Commissioning</td><td class="num">Turnkey, on site or remote</td><td>Startup, tuning, operator and maintenance training</td></tr>
+          <tr><td>Internal wiring</td><td class="num">IPC/WHMA-A-620 Class 2</td><td>Built by our own harness shop — see Capability 03</td></tr>
+          <tr><td>Testing</td><td class="num">100% point-to-point + powered functional test</td><td>Hi-pot and continuity records included</td></tr>
+          <tr><td>Volume</td><td class="num">1 to <span class="ph">250+</span> units</td><td>One-off prototypes through repeat OEM production</td></tr>
+          <tr><td>Precision machining</td><td class="num">In-house CNC</td><td>Milling, turning, grinding via Ram Aerospace</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Sequence</div>
+      <h2>How a panel job runs</h2>
+      <p>Five stages. You get a named contact and a scheduled checkpoint at each one — not a quote and then silence until shipping.</p>
+    </div>
+    <div class="steps rev">
+      <div class="step"><div class="step-n">STAGE 01</div><h3>Quote</h3><p>We review your package, flag anything that will drive cost or lead time, and quote with a fixed component list.</p><div class="step-time ph">2 business days</div></div>
+      <div class="step"><div class="step-n">STAGE 02</div><h3>Engineering</h3><p>AutoCAD schematics, layout, heat rise, SCCR, and BOM by our own electrical engineers. You approve drawings before we cut metal.</p><div class="step-time ph">1–3 weeks · Path B only</div></div>
+      <div class="step"><div class="step-n">STAGE 03</div><h3>Fabricate</h3><p>Enclosure machined on our Hoffman ModCenter to the released drawing. Components ordered from authorized distributors only.</p><div class="step-time ph">Varies by component</div></div>
+      <div class="step"><div class="step-n">STAGE 04</div><h3>Build and test</h3><p>Wire, label, then 100% point-to-point check and a powered functional test running the actual PLC code against your sequence.</p><div class="step-time ph">2–4 weeks</div></div>
+      <div class="step"><div class="step-n">STAGE 05</div><h3>Commission</h3><p>Our software engineers start it up on your floor, tune the drives, and train your operators and maintenance team.</p><div class="step-time">On site or remote</div></div>
+    </div>
+  </div></section>
+
+  <div class="dim"></div>
+
+  <section><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Selected work</div>
+      <h2>What the panels actually did</h2>
+      <p>Replace these three with real jobs. Name the industry, the problem, and one number the customer cared about — that's what makes a case study worth reading.</p>
+    </div>
+    <div class="proof rev">
+      <div class="pcard">
+        <div class="pcard-tag">Food &amp; Beverage</div>
+        <h3>Washdown line control retrofit</h3>
+        <p>Replaced an obsolete relay panel on a bottling line with a NEMA 4X stainless panel and a modern PLC, cut over during a scheduled weekend shutdown.</p>
+        <div class="metric"><div class="metric-v ph">0 hrs</div><div class="metric-l">unplanned production loss</div></div>
+      </div>
+      <div class="pcard">
+        <div class="pcard-tag">OEM Machine Builder</div>
+        <h3>Repeat production panels</h3>
+        <p>Build-to-print panels for a machine builder shipping the same platform quarterly. Standardized BOM and kitted harnesses cut per-unit build time.</p>
+        <div class="metric"><div class="metric-v ph">32%</div><div class="metric-l">lower cost per unit by run 4</div></div>
+      </div>
+      <div class="pcard">
+        <div class="pcard-tag">Aerospace Supplier</div>
+        <h3>Test stand control system</h3>
+        <p>Designed and built the control panel, harnesses, and HMI for a component test stand, including data logging to the customer's quality system.</p>
+        <div class="metric"><div class="metric-v ph">9 weeks</div><div class="metric-l">concept to accepted on site</div></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap"><div class="band-grid">
+    <div class="rev">
+      <div class="eyebrow">Why buyers consolidate here</div>
+      <h2>One purchase order.<br>Four shops.</h2>
+      <p>Most panel builders subcontract their machining and buy their harnesses. When something doesn't fit, you're the one managing three vendors pointing at each other. We do all four in house — so the harness was built for that panel, and the back panel was cut for that enclosure.</p>
+    </div>
+    <div class="stack rev">
+      <div class="stack-row"><b>01</b><span>Control panels</span><em>UL 508A listed shop</em></div>
+      <div class="stack-row"><b>02</b><span>Automation machines</span><em>Design, build, install</em></div>
+      <div class="stack-row"><b>03</b><span>Wire harness</span><em>IPC/WHMA-A-620</em></div>
+      <div class="stack-row"><b>04</b><span>Retrofit &amp; integration</span><em>On-site field service</em></div>
+      <div class="stack-row"><b>05</b><span>Precision machining</span><em>Ram Aerospace, CNC</em></div>
+    </div>
+  </div></div></section>
+
+  <section style="padding-bottom:0"><div class="wrap">
+    <div class="sec-head rev"><div class="sec-kicker">Questions we get weekly</div><h2>Before you send the RFQ</h2></div>
+  </div>
+  <div class="faq">
+    <div class="wrap" style="padding:0">
+      <details><summary>What actually drives the price of a control panel?</summary><p>Components, almost always. The enclosure, drives, PLC, and safety devices typically make up the majority of the cost, and labor is a smaller share than most buyers expect. That's why we quote against a fixed component list — so you can see what's driving the number and decide whether a different drive or enclosure is worth the change.</p></details>
+      <details><summary>Can you apply the UL label, or do I need a field evaluation?</summary><p>We apply it. As a UL 508A listed shop we build under our own file and the panel ships with the label already on it. Field evaluations are what you need when a panel was built by someone who isn't listed, and they typically add cost and schedule per panel.</p></details>
+      <details><summary>What is SCCR and why does my inspector care about it?</summary><p>Short circuit current rating is the maximum fault current the panel can safely withstand. It has to be marked on the panel and it has to be at least as high as the available fault current at the point of installation. It's one of the most common reasons a panel gets red-tagged, so we calculate it during design rather than discovering it at startup.</p></details>
+      <details><summary>Do you program the panel, or just build it?</summary><p>Either. We have software engineers on staff, so we can deliver the panel with the PLC, HMI, and drive code written, tested on the bench, and commissioned on your floor. Plenty of customers do their own programming and just want the hardware — that's fine too, and it's quoted separately so you're not paying for engineering you don't need.</p></details>
+      <details><summary>Which industrial networks can you work with?</summary><p>EtherCAT, EtherNet/IP, PROFINET, PROFIBUS, and Modbus TCP and RTU, including mixed architectures where a machine has to talk to equipment on more than one protocol. If your plant standard is one network and a piece of vendor equipment arrives on another, that's a routine problem here rather than a change order.</p></details>
+      <details><summary>Do I own the PLC program?</summary><p>Yes. Source code is delivered unlocked and documented along with schematics, CAD files, and the operator manual. You are not required to come back to us to make a change — though we're happy to be the ones who do it.</p></details>
+      <details><summary>Will you build from drawings another shop produced?</summary><p>Yes, that's Path A. We'll review the package first and tell you if we see anything that won't pass UL or won't work as drawn, but we don't require you to pay us to redraw someone else's design.</p></details>
+    </div>
+  </div>
+  </section>
+
+  <section class="rfq" id="rfq-1"><div class="wrap"><div class="rfq-grid">
+    <div class="rev">
+      <div class="sec-kicker">Request a quote</div>
+      <h2>Send this and you'll get a real number, not a range</h2>
+      <p style="color:var(--muted)">Every item below is optional. But the more boxes you can tick, the tighter the quote — and the fewer rounds of email it takes to get there.</p>
+      <ul class="check">
+        <li>Schematics or a one-line diagram <span>PDF, DWG, or a photo of the existing panel is fine</span></li>
+        <li>Bill of materials <span>Or just tell us your preferred PLC and drive brands</span></li>
+        <li>I/O count <span>Rough is fine — 24 in / 16 out gets us close</span></li>
+        <li>Enclosure rating and mounting <span>Indoor, washdown, outdoor, hazardous location</span></li>
+        <li>Available fault current at the install point <span>Needed for the SCCR calculation</span></li>
+        <li>Who writes the code <span>You, us, or undecided — it changes the quote substantially</span></li>
+        <li>Network and plant standard <span>EtherNet/IP, EtherCAT, PROFINET, Modbus, or mixed</span></li>
+        <li>Quantity and required date <span>Tell us if this is a one-off or a repeat build</span></li>
+      </ul>
+    </div>
+    <div class="form rev">
+      <div class="row2">
+        <div class="field"><label for="n1">Name</label><input id="n1" type="text"></div>
+        <div class="field"><label for="c1">Company</label><input id="c1" type="text"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="e1">Email</label><input id="e1" type="email"></div>
+        <div class="field"><label for="p1">Phone</label><input id="p1" type="tel"></div>
+      </div>
+      <div class="field"><label for="t1">Which path fits?</label>
+        <select id="t1"><option>Build to print — I have drawings</option><option>Design and build — I have a process</option><option>Design, build and commission — turnkey</option><option>Not sure yet</option></select>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="s1">Programming</label>
+          <select id="s1"><option>You write the code</option><option>We write the code</option><option>Undecided</option></select>
+        </div>
+        <div class="field"><label for="w1">Network</label>
+          <select id="w1"><option>EtherNet/IP</option><option>EtherCAT</option><option>PROFINET</option><option>Modbus</option><option>Mixed / other</option><option>Not specified</option></select>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="q1">Quantity</label><input id="q1" type="text" placeholder="1"></div>
+        <div class="field"><label for="d1">Required date</label><input id="d1" type="text" placeholder="MM/YYYY"></div>
+      </div>
+      <div class="field"><label for="m1">Tell us about the panel</label><textarea id="m1" rows="4" placeholder="Equipment being controlled, environment, I/O count, PLC preference…"></textarea></div>
+      <div class="field"><label for="f1">Attach drawings or photos</label><input id="f1" type="file"></div>
+      <button class="btn btn-dark" type="button" style="width:100%">Send RFQ</button>
+      <p class="form-note">An engineer reviews every RFQ. You'll hear back within <span class="ph">2 business days</span> — and if we're not the right shop for it, we'll tell you that too.</p>
+    </div>
+  </div></div></section>
+
+  <footer><div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px">RAM<span>/</span>AUTOMATION</div>
+        <p style="margin:0">581 Tamarack Ave<br>Brea, CA 92821<br><a href="tel:7146724726" style="display:inline">(714) 672-4726</a></p>
+        <div class="certs"><span class="cert">UL 508A</span><span class="cert">IPC/WHMA-A-620</span><span class="cert ph">ISO 9001</span></div>
+      </div>
+      <div><h4>Capabilities</h4><a href="#">Control panels</a><a href="#">Automation machines</a><a href="#">Wire harness</a><a href="#">Retrofit &amp; upgrade</a><a href="#">System integration</a></div>
+      <div><h4>Industries</h4><a href="#">Aerospace</a><a href="#">Food &amp; beverage</a><a href="#">Medical device</a><a href="#">Semiconductor</a><a href="#">Water treatment</a></div>
+      <div><h4>Resources</h4><a href="#">Capability sheets (PDF)</a><a href="#">UL 508A buyer's guide</a><a href="#">RFQ checklist</a><a href="#">Careers</a></div>
+    </div>
+    <div class="f-bot"><span>© 2026 Ram Automation</span><span>Brea, California — serving Southern California and nationwide</span></div>
+  </div></footer>
+</div>
+
+<!-- ============================================================ -->
+<!-- PAGE 02 — CUSTOM AUTOMATION MACHINES                          -->
+<!-- ============================================================ -->
+<div class="page" id="p-machine">
+
+  <nav class="nav"><div class="nav-in">
+    <div class="brand">RAM<span>/</span>AUTOMATION</div>
+    <div class="nav-links">
+      <a href="#">Control Panels</a>
+      <a href="#" class="on">Automation Machines</a>
+      <a href="#">Wire Harness</a>
+      <a href="#">Retrofit &amp; Integration</a>
+      <a href="#">Industries</a>
+    </div>
+    <div class="nav-right">
+      <a class="nav-tel" href="tel:7146724726">(714) 672-4726</a>
+      <a class="btn btn-amber" href="#rfq-2">Request a quote</a>
+    </div>
+  </div></nav>
+
+  <div class="titleblock"><div class="wrap">
+    <div class="tb-cell">Capability <b>02</b></div>
+    <div class="tb-cell">Building machines since <b>2009</b></div>
+    <div class="tb-cell">In-house CNC</div>
+    <div class="tb-cell">Brea, CA</div>
+    <div class="tb-cell">Rev <b>2026.1</b></div>
+  </div></div>
+
+  <header class="hero"><div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Custom Automation Machines</div>
+        <h1>The machine doesn't exist yet.<br>That's the <em>whole point</em>.</h1>
+        <p class="hero-sub">If you could buy it off a shelf, you would have. We design and build single-purpose machines around one part, one process, and one cycle time — assembly, test, inspection, material handling — then install them, prove them out on your floor, and train the people who run them. We have been building them since 2009.</p>
+        <div class="hero-cta">
+          <a class="btn btn-amber" href="#rfq-2">Talk to an engineer</a>
+          <a class="btn btn-ghost" href="#fit-2">Is this the right fit?</a>
+        </div>
+      </div>
+      <div class="facts">
+        <h3>Typical program</h3>
+        <dl style="margin:0">
+          <div class="fact"><dt>Concept to install</dt><dd class="ph">16–30 weeks<small>depends on scope</small></dd></div>
+          <div class="fact"><dt>Project range</dt><dd class="ph">$75k – $1.5M+</dd></div>
+          <div class="fact"><dt>Typical payback</dt><dd class="ph">12–24 months</dd></div>
+          <div class="fact"><dt>Machined parts</dt><dd>In house<small>Ram Aerospace CNC</small></dd></div>
+          <div class="fact"><dt>Controls</dt><dd>In house<small>UL 508A panel shop</small></dd></div>
+          <div class="fact"><dt>Software</dt><dd>In house<small>PLC / HMI / motion</small></dd></div>
+          <div class="fact"><dt>Specialty</dt><dd>X-ray, laser<small>fine wire, torque cal</small></dd></div>
+          <div class="fact"><dt>Install support</dt><dd>On site + remote</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div style="height:60px"></div>
+  </div></header>
+
+  <section id="fit-2"><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Qualify it early</div>
+      <h2>Custom automation is not always the answer</h2>
+      <p>A custom machine is a capital project. Before anyone writes a spec, it's worth being honest about whether the numbers work — so here's the test we walk customers through on the first call, including the cases where we tell people not to do it.</p>
+    </div>
+    <div class="paths rev">
+      <div class="path alt">
+        <div class="path-tag">Usually worth it when</div>
+        <h3>The case is strong</h3>
+        <ul>
+          <li>The part runs at volume and will keep running for 3+ years</li>
+          <li>The operation is repetitive, and quality varies operator to operator</li>
+          <li>You can't hire for the role, or turnover keeps resetting your training</li>
+          <li>The task is ergonomically hard, hot, or otherwise a safety exposure</li>
+          <li>Scrap or rework on this step is measurable and annoying</li>
+          <li>100% inspection is required and humans can't keep up</li>
+        </ul>
+      </div>
+      <div class="path">
+        <div class="path-tag">Usually not worth it when</div>
+        <h3>Say so early</h3>
+        <ul>
+          <li>The product changes design every few months</li>
+          <li>Annual volume is low and unlikely to grow</li>
+          <li>The upstream process isn't stable yet — automate chaos and you get fast chaos</li>
+          <li>A fixture, a jig, or a bench-top tool solves 80% of it for 5% of the cost</li>
+          <li>The real bottleneck is somewhere else on the line</li>
+        </ul>
+        <p style="margin-top:18px;font-size:14px">If you're in this column, we'll say so. We'd rather build you a $6,000 fixture that works than a $300,000 machine you regret.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <div class="dim"></div>
+
+  <section><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Datasheet</div>
+      <h2>What we build</h2>
+      <p>Machine categories, with the questions that determine scope for each. Replace the volume and rate figures with your actual demonstrated numbers.</p>
+    </div>
+    <div class="sheet rev">
+      <table>
+        <caption>Machine categories — Rev 2026.1</caption>
+        <thead><tr><th>Category</th><th>Typical configuration</th><th>What sets the price</th></tr></thead>
+        <tbody>
+          <tr><td>Assembly systems</td><td class="num">Single station, dial index, or inline multi-station</td><td>Number of stations and required cycle time</td></tr>
+          <tr><td>Test &amp; inspection</td><td class="num">Leak, continuity, force-displacement, functional test</td><td>Measurement accuracy and data logging requirements</td></tr>
+          <tr><td>Vision inspection</td><td class="num">Presence/absence, dimensional, OCR, defect detection</td><td>Feature size, part variation, and reject handling</td></tr>
+          <tr><td>Robotic cells</td><td class="num">6-axis, SCARA, and collaborative robot integration</td><td>Reach, payload, safety scheme, and end-effector complexity</td></tr>
+          <tr><td>Material handling</td><td class="num">Conveyors, pick and place, part feeding, palletizing</td><td>Part geometry and orientation control</td></tr>
+          <tr><td>Marking &amp; traceability</td><td class="num">Laser mark, label apply, serialize, verify</td><td>Read rate requirement and database integration</td></tr>
+          <tr><td>Torque &amp; calibration</td><td class="num">Assembly, torque calibration, verification, per-unit records</td><td>Number of application-specific recipes and required accuracy</td></tr>
+          <tr><td>Laser processing</td><td class="num">Ablation, stripping, and marking — including fine wire</td><td>Material, gauge, and continuous versus indexed handling</td></tr>
+          <tr><td>Fine wire handling</td><td class="num">Down to 50 AWG, continuous spool to 30,000 ft</td><td>Closed-loop tension control and break recovery</td></tr>
+          <tr><td>Radiation &amp; containment</td><td class="num">In-machine X-ray inspection with verified containment</td><td>Shielding design, interlocks, and leakage verification</td></tr>
+          <tr><td>Retrofit &amp; rebuild</td><td class="num">New controls and drives on sound mechanical machines</td><td>Condition of the base machine and documentation available</td></tr>
+          <tr><td>Fixtures &amp; tooling</td><td class="num">Weld fixtures, gauges, assembly aids, EOAT</td><td>Tolerance stack and cycle count</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Sequence</div>
+      <h2>How a machine program runs</h2>
+      <p>The two checkpoints that matter most are the design review and the factory acceptance test. Nothing gets built before you approve the design, and nothing ships before it runs your parts in our building.</p>
+    </div>
+    <div class="steps rev">
+      <div class="step"><div class="step-n">STAGE 01</div><h3>Study</h3><p>We look at the part, the process, and the numbers. You get a concept and an honest payback estimate before you commit.</p><div class="step-time ph">1–3 weeks</div></div>
+      <div class="step"><div class="step-n">STAGE 02</div><h3>Design review</h3><p>3D model, cycle time budget, safety scheme, and controls architecture — reviewed with your team before a single part is cut.</p><div class="step-time ph">3–6 weeks</div></div>
+      <div class="step"><div class="step-n">STAGE 03</div><h3>Build</h3><p>Parts machined in house, panel built in our UL 508A shop, harnesses to IPC/WHMA-A-620, code written by our own software engineers. Progress photos, not silence.</p><div class="step-time ph">8–16 weeks</div></div>
+      <div class="step"><div class="step-n">STAGE 04</div><h3>FAT</h3><p>The machine runs your parts on our floor, to the agreed rate, with you in the room. Punch list closed before it ships.</p><div class="step-time ph">1–2 weeks</div></div>
+      <div class="step"><div class="step-n">STAGE 05</div><h3>Install &amp; SAT</h3><p>Installed, commissioned, and proven out on your floor. Operator and maintenance training included, not quoted as an extra.</p><div class="step-time ph">1–2 weeks</div></div>
+    </div>
+  </div></section>
+
+  <div class="dim"></div>
+
+  <section><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Selected work</div>
+      <h2>The ones that were actually hard</h2>
+      <p>Any shop can bolt a cylinder to a frame. These are the projects where the answer wasn't in a catalog — and they're a better description of what we do than a list of machine categories.</p>
+    </div>
+    <div class="proof rev">
+      <div class="pcard">
+        <div class="pcard-tag">In-machine X-ray inspection</div>
+        <h3>Imaging inside a sealed production machine</h3>
+        <p>Part inspection required X-ray imaging inside an enclosed automated machine. The imaging was the straightforward half — containing it was not. We designed the shielding, enclosure, and fail-safe interlock system so emission stops on any access, then verified leakage at the machine exterior against the regulatory limit.</p>
+        <div class="metric"><div class="metric-v ph">&lt; limit</div><div class="metric-l">verified radiation leakage at exterior</div></div>
+      </div>
+      <div class="pcard">
+        <div class="pcard-tag">Laser ablation, fine wire</div>
+        <h3>50 AWG across a 30,000 ft spool</h3>
+        <p>Continuous laser ablation on wire down to 50 AWG — about the diameter of a human hair. At that gauge the constraint isn't the laser, it's tension: the wire breaks under almost nothing, and a single break means restringing the entire line. Closed-loop tension control, precise motion, and regulated laser power held the process across the full spool.</p>
+        <div class="metric"><div class="metric-v">30,000 ft</div><div class="metric-l">continuous spool, 50 AWG capable</div></div>
+      </div>
+      <div class="pcard">
+        <div class="pcard-tag">Orthopedic assembly &amp; calibration</div>
+        <h3>Every unit calibrated to its own spec</h3>
+        <p>Assembly and torque calibration of orthopedic modules where the target value depends on the application — a spine bolt and a knee implant are not the same specification. Each unit is assembled, calibrated to its application's torque, verified, and recorded, with the recipe selected at the HMI and results logged per serial number.</p>
+        <div class="metric"><div class="metric-v ph">__ recipes</div><div class="metric-l">application-specific torque values</div></div>
+      </div>
+    </div>
+    <p style="font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:20px;letter-spacing:.02em">Describe your engineering problem, not the customer's product. The challenge and the solution are yours to publish; part geometry, product names, and process parameters are not.</p>
+  </div></section>
+
+  <section class="band"><div class="wrap"><div class="band-grid">
+    <div class="rev">
+      <div class="eyebrow">What ships with the machine</div>
+      <h2>No black boxes</h2>
+      <p>A machine you can't maintain is a machine that becomes someone else's revenue stream. Every program ships with the full documentation set, and the PLC and HMI source code is delivered unlocked. If you want to change it yourself in three years, you can.</p>
+    </div>
+    <div class="stack rev">
+      <div class="stack-row"><b>01</b><span>PLC &amp; HMI source</span><em>Unlocked, commented</em></div>
+      <div class="stack-row"><b>02</b><span>AutoCAD schematics</span><em>UL approved, as-built</em></div>
+      <div class="stack-row"><b>03</b><span>CAD files</span><em>Every designed part</em></div>
+      <div class="stack-row"><b>04</b><span>Operator manual</span><em>Written for your floor</em></div>
+      <div class="stack-row"><b>05</b><span>Spare parts list</span><em>What to stock, and why</em></div>
+      <div class="stack-row"><b>06</b><span>Remote diagnostics</span><em>Optional, 24/7 login</em></div>
+    </div>
+  </div></div></section>
+
+  <section style="padding-bottom:0"><div class="wrap">
+    <div class="sec-head rev"><div class="sec-kicker">Questions we get weekly</div><h2>Before you spec a machine</h2></div>
+  </div>
+  <div class="faq">
+    <div class="wrap" style="padding:0">
+      <details><summary>How do I justify this to whoever signs the check?</summary><p>Usually on labor, scrap, and throughput — in that order. During the study stage we build the payback math with your real numbers: current cycle time, operators on the task, scrap rate, and the fully loaded labor cost. If the payback lands past about 24 months, that's worth knowing before you spend anything, and we'll say so.</p></details>
+      <details><summary>What happens if my part design changes later?</summary><p>Ask us this during design, not after. If you know a change is coming, we can build in adjustability, quick-change tooling, or extra station capacity for a fraction of what it costs to retrofit later. Machines get expensive when flexibility is added after the fact.</p></details>
+      <details><summary>Who handles the safety and risk assessment?</summary><p>We do, as part of the design. Guarding, light curtains, interlocks, and the safety-rated control architecture are designed in from the start and documented — not bolted on after your EHS team sees the machine for the first time.</p></details>
+      <details><summary>Do you work from our concept, or start from scratch?</summary><p>Either. Plenty of customers arrive with a sketch and a cycle time target, and plenty arrive with a part and a problem. We'll tell you honestly which parts of an existing concept we think will work and which we'd change.</p></details>
+      <details><summary>Can you take over a machine another integrator started?</summary><p>Sometimes. It depends on the state of the design, the quality of the documentation, and how far the build got. We'll look at it and give you a straight answer, including if the honest answer is that starting over is cheaper.</p></details>
+    </div>
+  </div>
+  </section>
+
+  <section class="rfq" id="rfq-2"><div class="wrap"><div class="rfq-grid">
+    <div class="rev">
+      <div class="sec-kicker">Start a conversation</div>
+      <h2>You don't need a spec to call us</h2>
+      <p style="color:var(--muted)">Most machine programs start with a part and a frustration, not a requirements document. If you have any of the following, that's enough for a useful first call.</p>
+      <ul class="check">
+        <li>A description of the operation today <span>Even a phone video of someone doing it by hand</span></li>
+        <li>The part <span>A drawing, a 3D model, or a sample we can look at</span></li>
+        <li>Annual volume and expected life <span>Drives the entire economic case</span></li>
+        <li>Required cycle time or rate <span>Parts per minute, or shifts you're trying to eliminate</span></li>
+        <li>Current labor on the task <span>How many people, how many shifts</span></li>
+        <li>Budget range and target date <span>Even a rough range keeps us from designing the wrong machine</span></li>
+      </ul>
+    </div>
+    <div class="form rev">
+      <div class="row2">
+        <div class="field"><label for="n2">Name</label><input id="n2" type="text"></div>
+        <div class="field"><label for="c2">Company</label><input id="c2" type="text"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="e2">Email</label><input id="e2" type="email"></div>
+        <div class="field"><label for="p2">Phone</label><input id="p2" type="tel"></div>
+      </div>
+      <div class="field"><label for="t2">What stage are you at?</label>
+        <select id="t2"><option>Exploring — is automation worth it?</option><option>Have a concept, need it engineered</option><option>Have a full spec, ready to quote</option><option>Retrofit or rebuild of an existing machine</option></select>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="v2">Annual volume</label><input id="v2" type="text" placeholder="parts/year"></div>
+        <div class="field"><label for="r2">Target rate</label><input id="r2" type="text" placeholder="parts/min"></div>
+      </div>
+      <div class="field"><label for="m2">Describe the operation</label><textarea id="m2" rows="4" placeholder="What happens today, what you want to change, what 'done' looks like…"></textarea></div>
+      <div class="field"><label for="f2">Attach part drawings, models, or video</label><input id="f2" type="file"></div>
+      <button class="btn btn-dark" type="button" style="width:100%">Send it over</button>
+      <p class="form-note">An applications engineer calls you back — not a sales rep working from a script. If we don't think automation is the right move, we'll tell you on that call.</p>
+    </div>
+  </div></div></section>
+
+  <footer><div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px">RAM<span>/</span>AUTOMATION</div>
+        <p style="margin:0">581 Tamarack Ave<br>Brea, CA 92821<br><a href="tel:7146724726" style="display:inline">(714) 672-4726</a></p>
+        <div class="certs"><span class="cert">UL 508A</span><span class="cert">IPC/WHMA-A-620</span><span class="cert ph">ISO 9001</span></div>
+      </div>
+      <div><h4>Capabilities</h4><a href="#">Control panels</a><a href="#">Automation machines</a><a href="#">Wire harness</a><a href="#">Retrofit &amp; upgrade</a><a href="#">System integration</a></div>
+      <div><h4>Industries</h4><a href="#">Aerospace</a><a href="#">Food &amp; beverage</a><a href="#">Medical device</a><a href="#">Semiconductor</a><a href="#">Water treatment</a></div>
+      <div><h4>Resources</h4><a href="#">Capability sheets (PDF)</a><a href="#">Automation ROI worksheet</a><a href="#">RFQ checklist</a><a href="#">Careers</a></div>
+    </div>
+    <div class="f-bot"><span>© 2026 Ram Automation</span><span>Brea, California — serving Southern California and nationwide</span></div>
+  </div></footer>
+</div>
+
+<!-- ============================================================ -->
+<!-- PAGE 03 — IPC/WHMA-A-620 WIRE HARNESS                         -->
+<!-- ============================================================ -->
+<div class="page" id="p-harness">
+
+  <nav class="nav"><div class="nav-in">
+    <div class="brand">RAM<span>/</span>AUTOMATION</div>
+    <div class="nav-links">
+      <a href="#">Control Panels</a>
+      <a href="#">Automation Machines</a>
+      <a href="#" class="on">Wire Harness</a>
+      <a href="#">Retrofit &amp; Integration</a>
+      <a href="#">Industries</a>
+    </div>
+    <div class="nav-right">
+      <a class="nav-tel" href="tel:7146724726">(714) 672-4726</a>
+      <a class="btn btn-amber" href="#rfq-3">Request a quote</a>
+    </div>
+  </div></nav>
+
+  <div class="titleblock"><div class="wrap">
+    <div class="tb-cell">Capability <b>03</b></div>
+    <div class="tb-cell">IPC/WHMA-A-620 <b>Rev E</b></div>
+    <div class="tb-cell">Class <b>2 &amp; 3</b></div>
+    <div class="tb-cell">Built in Brea, CA — USA</div>
+    <div class="tb-cell">Rev <b>2026.1</b></div>
+  </div></div>
+
+  <header class="hero"><div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Wire Harness &amp; Cable Assembly</div>
+        <h1>Every crimp inspected<br>to a <em>published standard</em>.</h1>
+        <p class="hero-sub">IPC/WHMA-A-620 is the industry consensus standard for cable and wire harness assemblies — it defines exactly what an acceptable crimp, solder joint, splice, and shield termination looks like. Our operators and inspectors are certified to it, so "good enough" is never a judgement call made at a bench.</p>
+        <div class="hero-cta">
+          <a class="btn btn-amber" href="#rfq-3">Request a quote</a>
+          <a class="btn btn-ghost" href="#class-3">Which class do I need?</a>
+        </div>
+      </div>
+      <div class="facts">
+        <h3>At a glance</h3>
+        <dl style="margin:0">
+          <div class="fact"><dt>Standard</dt><dd>IPC/WHMA-A-620<small>Rev E, Class 2 &amp; 3</small></dd></div>
+          <div class="fact"><dt>Prototype turn</dt><dd class="ph">5–10 days</dd></div>
+          <div class="fact"><dt>Production lead</dt><dd class="ph">3–5 weeks</dd></div>
+          <div class="fact"><dt>Wire range</dt><dd class="ph">30 AWG – 2/0</dd></div>
+          <div class="fact"><dt>Minimum order</dt><dd class="ph">1 piece<small>prototypes welcome</small></dd></div>
+          <div class="fact"><dt>Electrical test</dt><dd>100% continuity</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div style="height:60px"></div>
+  </div></header>
+
+  <section id="class-3"><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Buyer's guide</div>
+      <h2>Class 1, 2, or 3 — and why it changes your price</h2>
+      <p>This is the single most common source of quote-to-quote confusion in harness buying. Two shops can quote the same drawing and be 40% apart simply because they assumed different classes. Here's what each one actually means so you can specify it deliberately.</p>
+    </div>
+    <div class="sheet rev">
+      <table>
+        <caption>IPC/WHMA-A-620 product classes</caption>
+        <thead><tr><th>&nbsp;</th><th>Class 1</th><th>Class 2</th><th>Class 3</th></tr></thead>
+        <tbody>
+          <tr><td>Intent</td><td class="cls">General electronic</td><td class="cls">Dedicated service</td><td class="cls">High performance</td></tr>
+          <tr><td>Plain english</td><td>It needs to work</td><td>It needs to keep working, and downtime matters</td><td>It cannot fail, and it may be unrepairable in service</td></tr>
+          <tr><td>Typical use</td><td>Consumer goods, low-cost equipment</td><td>Industrial machinery, control panels, automotive, telecom</td><td>Aerospace, defense, medical, life support, space</td></tr>
+          <tr><td>Cosmetic defects</td><td>Broadly tolerated</td><td>Limited tolerance</td><td>Tightest criteria in the standard</td></tr>
+          <tr><td>Inspection</td><td>Basic</td><td>Documented, sampled or 100%</td><td>100%, with records retained</td></tr>
+          <tr><td>Relative cost</td><td class="num">Lowest</td><td class="num">Baseline</td><td class="num ph">Typically +25–60%</td></tr>
+          <tr><td>We build this</td><td>On request</td><td class="num" style="color:var(--steel);font-weight:600">✓ Standard</td><td class="num" style="color:var(--steel);font-weight:600">✓ Standard</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:14.5px;color:var(--muted);margin-top:18px;max-width:80ch"><strong style="color:var(--ink)">Not sure?</strong> Most industrial and control panel work is Class 2. If your harness goes into an aircraft, an implantable or life-supporting device, or a defense program, you are almost certainly Class 3 — and your customer's drawing usually says so. If it doesn't say, ask us before you buy on price.</p>
+  </div></section>
+
+  <div class="dim"></div>
+
+  <section><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Datasheet</div>
+      <h2>Capability specifications</h2>
+      <p>Check your drawing against this before you send it. Anything outside these ranges is still worth asking about — several are equipment limits we can work around.</p>
+    </div>
+    <div class="sheet rev">
+      <table>
+        <caption>Wire harness capability — Rev 2026.1</caption>
+        <thead><tr><th>Parameter</th><th>Capability</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Workmanship standard</td><td class="num">IPC/WHMA-A-620 Rev E</td><td>Certified operators and inspectors (CIS / CIT)</td></tr>
+          <tr><td>Classes built</td><td class="num">Class 2 and Class 3</td><td>Class 1 on request</td></tr>
+          <tr><td>Wire gauge range</td><td class="num ph">30 AWG to 2/0</td><td>Automated cut, strip, and crimp</td></tr>
+          <tr><td>Terminations</td><td class="num">Crimp, solder, IDC, splice</td><td>Hand soldering to J-STD-001</td></tr>
+          <tr><td>Crimp tooling</td><td class="num">Calibrated dies, applicator-based</td><td>Molex, TE, Amphenol, Deutsch, JST</td></tr>
+          <tr><td>Crimp verification</td><td class="num">Pull test and periodic cross-section</td><td>Records retained per lot</td></tr>
+          <tr><td>Connector types</td><td class="num">Circular, rectangular, D-sub, RJ, ring/spade</td><td>MIL-spec circulars on Class 3 work</td></tr>
+          <tr><td>Coax &amp; shielding</td><td class="num">Coax, twisted pair, braided and foil shields</td><td>Shield termination and drain wire management</td></tr>
+          <tr><td>Protection</td><td class="num">Braid, convoluted, heat shrink, spiral wrap</td><td>Molded and potted boots available</td></tr>
+          <tr><td>Marking</td><td class="num">Heat shrink labels, inkjet, hot stamp</td><td>Serialization and date coding available</td></tr>
+          <tr><td>Electrical test</td><td class="num">100% continuity and hipot</td><td>Test report shipped with every lot</td></tr>
+          <tr><td>Volume</td><td class="num ph">1 piece to 10,000+ / year</td><td>Prototype through repeat production</td></tr>
+          <tr><td>Build location</td><td class="num">Brea, California</td><td>Domestic build — no offshore subcontracting</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Sequence</div>
+      <h2>Prototype to production</h2>
+      <p>The path most customers actually take. You should never commit to a production run before you've held a first article in your hand and fit it in the real assembly.</p>
+    </div>
+    <div class="steps rev">
+      <div class="step"><div class="step-n">STAGE 01</div><h3>Quote</h3><p>Send a drawing, a wire list, or the harness you're replacing. We quote against a defined class and a fixed BOM.</p><div class="step-time ph">2 business days</div></div>
+      <div class="step"><div class="step-n">STAGE 02</div><h3>Prototype</h3><p>First articles built and tested. You fit them in the real assembly and tell us what to change.</p><div class="step-time ph">5–10 days</div></div>
+      <div class="step"><div class="step-n">STAGE 03</div><h3>First article approval</h3><p>Documented FAI against your drawing. Once approved, the build is locked and repeatable.</p><div class="step-time ph">Your schedule</div></div>
+      <div class="step"><div class="step-n">STAGE 04</div><h3>Production</h3><p>Boards and fixtures built for repeatability. 100% electrical test on every unit, records retained by lot.</p><div class="step-time ph">3–5 weeks</div></div>
+      <div class="step"><div class="step-n">STAGE 05</div><h3>Repeat &amp; stock</h3><p>Blanket orders with scheduled releases, plus optional buffer stock so your line never waits on harnesses.</p><div class="step-time">Ongoing</div></div>
+    </div>
+  </div></section>
+
+  <div class="dim"></div>
+
+  <section><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Selected work</div>
+      <h2>Harnesses we build</h2>
+      <p>Replace with real jobs. For harness buyers, the persuasive numbers are usually defect rate, on-time delivery, and turnaround.</p>
+    </div>
+    <div class="proof rev">
+      <div class="pcard">
+        <div class="pcard-tag">Industrial OEM</div>
+        <h3>Panel harness kits</h3>
+        <p>Pre-built, labeled harness kits for a machine builder's repeat platform, delivered as kitted sets so panel build time drops on the customer's own floor.</p>
+        <div class="metric"><div class="metric-v ph">6 hrs</div><div class="metric-l">saved per panel build</div></div>
+      </div>
+      <div class="pcard">
+        <div class="pcard-tag">Aerospace / Class 3</div>
+        <h3>Test equipment harnesses</h3>
+        <p>Class 3 harnesses with MIL-spec circulars and shielded pairs for a ground test system, with full traceability and retained inspection records.</p>
+        <div class="metric"><div class="metric-v ph">0</div><div class="metric-l">field failures to date</div></div>
+      </div>
+      <div class="pcard">
+        <div class="pcard-tag">Medical Device</div>
+        <h3>Prototype to production</h3>
+        <p>Started with six prototype harnesses during design validation, then carried the same build documentation into a repeating production release.</p>
+        <div class="metric"><div class="metric-v ph">7 days</div><div class="metric-l">drawing to first article</div></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap"><div class="band-grid">
+    <div class="rev">
+      <div class="eyebrow">Why buyers consolidate here</div>
+      <h2>The harness shop is<br>down the hall</h2>
+      <p>Most panel builders buy harnesses from someone else, and most harness shops have never wired a panel. We do both in the same building — which means the harness is designed around the panel it goes into, and when something needs to change, it changes the same day instead of after a two-week vendor loop.</p>
+    </div>
+    <div class="stack rev">
+      <div class="stack-row"><b>01</b><span>Wire harness</span><em>IPC/WHMA-A-620</em></div>
+      <div class="stack-row"><b>02</b><span>Control panels</span><em>UL 508A listed shop</em></div>
+      <div class="stack-row"><b>03</b><span>Automation machines</span><em>Design, build, install</em></div>
+      <div class="stack-row"><b>04</b><span>Retrofit &amp; integration</span><em>On-site field service</em></div>
+      <div class="stack-row"><b>05</b><span>Precision machining</span><em>Ram Aerospace, CNC</em></div>
+    </div>
+  </div></div></section>
+
+  <section style="padding-bottom:0"><div class="wrap">
+    <div class="sec-head rev"><div class="sec-kicker">Questions we get weekly</div><h2>Before you send the drawing</h2></div>
+  </div>
+  <div class="faq">
+    <div class="wrap" style="padding:0">
+      <details><summary>What does "IPC/WHMA-A-620 certified" actually mean?</summary><p>It means our operators and inspectors have been trained and certified against the standard, and that we build and inspect to its published acceptance criteria rather than to in-house opinion. The standard was developed by IPC and the Wire Harness Manufacturers Association and is the industry consensus document for cable and harness assemblies. Certification is maintained through recertification, not earned once.</p></details>
+      <details><summary>I don't have a drawing. Can you still quote?</summary><p>Usually. Send the harness you're replacing, or a wire list with connector part numbers and lengths, and we can work from that. For anything going into production we'll produce a controlled drawing so future lots are built identically — you own that drawing.</p></details>
+      <details><summary>Do you have a minimum order quantity?</summary><p>No. We build single prototypes, and we'd rather you validate one before ordering a thousand. Per-unit price does drop meaningfully at volume, and we'll show you the price break points in the quote.</p></details>
+      <details><summary>Why is another quote so much cheaper?</summary><p>Nine times out of ten it's one of three things: a lower IPC class assumed, a cheaper connector or wire substituted, or the work is being built offshore. None of those are automatically wrong — but they should be a decision you made, not a surprise you discovered. Our quotes state the class and the exact BOM so you can compare like for like.</p></details>
+      <details><summary>Do you test every harness?</summary><p>Yes. 100% continuity test on every unit, with hipot where the application calls for it, and the test report ships with the lot. Crimps are pull-tested to the standard, and records are retained.</p></details>
+    </div>
+  </div>
+  </section>
+
+  <section class="rfq" id="rfq-3"><div class="wrap"><div class="rfq-grid">
+    <div class="rev">
+      <div class="sec-kicker">Request a quote</div>
+      <h2>What to send for a same-week quote</h2>
+      <p style="color:var(--muted)">You don't need all of it. A photo of the harness you're replacing plus a quantity is enough to start.</p>
+      <ul class="check">
+        <li>Harness drawing or wire list <span>PDF, DWG, or a spreadsheet of from-to connections</span></li>
+        <li>Connector part numbers <span>Manufacturer and full part number, including contacts</span></li>
+        <li>Wire specification <span>Gauge, insulation type, and any shielding requirements</span></li>
+        <li>IPC class required <span>Class 2 or 3 — if you're unsure, we'll help you decide</span></li>
+        <li>Quantity and release schedule <span>Prototype qty now, and expected annual usage</span></li>
+        <li>Any customer or industry spec <span>AS9100 flowdowns, ITAR, RoHS, UL recognition</span></li>
+      </ul>
+    </div>
+    <div class="form rev">
+      <div class="row2">
+        <div class="field"><label for="n3">Name</label><input id="n3" type="text"></div>
+        <div class="field"><label for="c3">Company</label><input id="c3" type="text"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="e3">Email</label><input id="e3" type="email"></div>
+        <div class="field"><label for="p3">Phone</label><input id="p3" type="tel"></div>
+      </div>
+      <div class="field"><label for="t3">IPC class required</label>
+        <select id="t3"><option>Class 2 — industrial / commercial</option><option>Class 3 — aerospace, medical, defense</option><option>Class 1 — general electronic</option><option>Not sure — help me decide</option></select>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="q3">Prototype qty</label><input id="q3" type="text" placeholder="1"></div>
+        <div class="field"><label for="a3">Annual usage</label><input id="a3" type="text" placeholder="est. units/year"></div>
+      </div>
+      <div class="field"><label for="m3">Anything we should know</label><textarea id="m3" rows="4" placeholder="Application, environment, connector families, required specs…"></textarea></div>
+      <div class="field"><label for="f3">Attach drawing, wire list, or photos</label><input id="f3" type="file"></div>
+      <button class="btn btn-dark" type="button" style="width:100%">Send RFQ</button>
+      <p class="form-note">Quotes go out within <span class="ph">2 business days</span>, stating the IPC class and the exact bill of materials — so you can compare it against any other quote line for line.</p>
+    </div>
+  </div></div></section>
+
+  <footer><div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px">RAM<span>/</span>AUTOMATION</div>
+        <p style="margin:0">581 Tamarack Ave<br>Brea, CA 92821<br><a href="tel:7146724726" style="display:inline">(714) 672-4726</a></p>
+        <div class="certs"><span class="cert">UL 508A</span><span class="cert">IPC/WHMA-A-620</span><span class="cert ph">ISO 9001</span></div>
+      </div>
+      <div><h4>Capabilities</h4><a href="#">Control panels</a><a href="#">Automation machines</a><a href="#">Wire harness</a><a href="#">Retrofit &amp; upgrade</a><a href="#">System integration</a></div>
+      <div><h4>Industries</h4><a href="#">Aerospace</a><a href="#">Food &amp; beverage</a><a href="#">Medical device</a><a href="#">Semiconductor</a><a href="#">Water treatment</a></div>
+      <div><h4>Resources</h4><a href="#">Capability sheets (PDF)</a><a href="#">IPC class buyer's guide</a><a href="#">RFQ checklist</a><a href="#">Careers</a></div>
+    </div>
+    <div class="f-bot"><span>© 2026 Ram Automation</span><span>Brea, California — serving Southern California and nationwide</span></div>
+  </div></footer>
+</div>
+
+<!-- ============================================================ -->
+<!-- PAGE 04 — INDUSTRIES & PROOF                                  -->
+<!-- ============================================================ -->
+<div class="page" id="p-industries">
+
+  <nav class="nav"><div class="nav-in">
+    <div class="brand">RAM<span>/</span>AUTOMATION</div>
+    <div class="nav-links">
+      <a href="#">Control Panels</a>
+      <a href="#">Automation Machines</a>
+      <a href="#">Wire Harness</a>
+      <a href="#">Retrofit &amp; Integration</a>
+      <a href="#" class="on">Industries</a>
+    </div>
+    <div class="nav-right">
+      <a class="nav-tel" href="tel:7146724726">(714) 672-4726</a>
+      <a class="btn btn-amber" href="#rfq-4">Request a quote</a>
+    </div>
+  </div></nav>
+
+  <div class="titleblock"><div class="wrap">
+    <div class="tb-cell">Industries served</div>
+    <div class="tb-cell">Since <b class="ph">19__</b></div>
+    <div class="tb-cell">ITAR <b class="ph">registered</b></div>
+    <div class="tb-cell">Brea, CA</div>
+    <div class="tb-cell">Rev <b>2026.1</b></div>
+  </div></div>
+
+  <header class="hero"><div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Who we build for</div>
+        <h1>We can't show you<br>their logos. Here's<br><em>everything else</em>.</h1>
+        <p class="hero-sub">Most of our customers work under supply agreements that don't permit vendors to display their marks — which is fairly standard once you're building for aerospace, space, and defense programs. We'd rather respect that than decorate a page. So instead of a logo wall, here is what we actually do, for whom, and what it took to be approved to do it.</p>
+        <div class="hero-cta">
+          <a class="btn btn-amber" href="#rfq-4">Request a quote</a>
+          <a class="btn btn-ghost" href="#qual-4">How we get qualified</a>
+        </div>
+      </div>
+      <div class="facts">
+        <h3>By the numbers</h3>
+        <dl style="margin:0">
+          <div class="fact"><dt>In business</dt><dd class="ph">__ years</dd></div>
+          <div class="fact"><dt>Repeat customers</dt><dd class="ph">__% of revenue</dd></div>
+          <div class="fact"><dt>Longest relationship</dt><dd class="ph">__ years</dd></div>
+          <div class="fact"><dt>On-time delivery</dt><dd class="ph">__%</dd></div>
+          <div class="fact"><dt>Customer audits passed</dt><dd class="ph">__ since 20__</dd></div>
+          <div class="fact"><dt>Built in</dt><dd>Brea, California</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div style="height:60px"></div>
+  </div></header>
+
+  <section><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Seven markets</div>
+      <h2>Industries we build for</h2>
+      <p>Each of these imposes a different requirement on the build. The industry doesn't just describe who buys — it determines the standard, the documentation, and the inspection level.</p>
+    </div>
+    <div class="inds rev">
+      <div class="ind">
+        <div class="ind-n">MARKET 01</div>
+        <h3>Aerospace &amp; Defense</h3>
+        <p>Harnesses, ground support equipment, and test systems for airframe and component suppliers.</p>
+        <div class="ind-ref">Class 3 harnesses and functional test equipment for tier-one aerospace suppliers.</div>
+        <div class="ind-req">IPC/WHMA-A-620 Class 3 · AS9100 flowdowns · ITAR · AS9102 first article</div>
+      </div>
+      <div class="ind">
+        <div class="ind-n">MARKET 02</div>
+        <h3>Space &amp; Launch</h3>
+        <p>Harnesses and control systems for launch vehicle producers and spaceflight research programs.</p>
+        <div class="ind-ref">Wire harnesses and test stand controls for a commercial launch provider and a NASA-affiliated research laboratory.</div>
+        <div class="ind-req">Class 3 · full traceability · retained inspection records · domestic build</div>
+      </div>
+      <div class="ind">
+        <div class="ind-n">MARKET 03</div>
+        <h3>Entertainment &amp; Theme Park</h3>
+        <p>Ride control, show control, and animation panels for attractions and studio production facilities.</p>
+        <div class="ind-ref">Ride and show control panels for major Southern California theme park operators.</div>
+        <div class="ind-req">Safety-rated control architecture · redundancy · guest-safety documentation</div>
+      </div>
+      <div class="ind">
+        <div class="ind-n">MARKET 04</div>
+        <h3>Medical Device</h3>
+        <p>Assembly and test automation with part-level traceability, plus harnesses for capital equipment.</p>
+        <div class="ind-ref">Automated assembly and leak test cells with serialized traceability for Class II device manufacturers.</div>
+        <div class="ind-req">Validation support · IQ/OQ documentation · MES integration · Class 3 harnesses</div>
+      </div>
+      <div class="ind">
+        <div class="ind-n">MARKET 05</div>
+        <h3>Food &amp; Beverage</h3>
+        <p>Washdown-rated control panels, line controls, and legacy machine retrofits for production plants.</p>
+        <div class="ind-ref">NEMA 4X stainless panels and line control retrofits for beverage and packaged food producers.</div>
+        <div class="ind-req">NEMA 4X · stainless construction · sanitary design · weekend cutover work</div>
+      </div>
+      <div class="ind">
+        <div class="ind-n">MARKET 06</div>
+        <h3>Semiconductor</h3>
+        <p>Tool controls, gas and chemical delivery automation, and harnesses for fab equipment OEMs.</p>
+        <div class="ind-ref">Control panels and harness assemblies for semiconductor capital equipment builders.</div>
+        <div class="ind-req">SEMI S2 awareness · cleanroom-compatible build · precision documentation</div>
+      </div>
+      <div class="ind">
+        <div class="ind-n">MARKET 07</div>
+        <h3>Industrial OEM</h3>
+        <p>Repeat-build panels and kitted harnesses for machine builders shipping their own platforms.</p>
+        <div class="ind-ref">Standardized panels and kitted harness sets for OEMs shipping the same machine quarterly.</div>
+        <div class="ind-req">Repeatable BOM · blanket orders · buffer stock · scheduled releases</div>
+      </div>
+    </div>
+    <p style="font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:20px;letter-spacing:.02em">Replace each reference line above with your real work. Keep them unnamed but specific — a description a buyer can decode is worth more than a logo they scroll past.</p>
+  </div></section>
+
+  <div class="dim"></div>
+
+  <section class="band" id="qual-4"><div class="wrap">
+    <div class="sec-head rev" style="max-width:76ch">
+      <div class="eyebrow">Instead of a logo wall</div>
+      <h2 style="color:#fff">A logo proves someone<br>bought something once</h2>
+      <p style="color:#C3CDD4">What actually tells you whether a supplier is any good is the bar they had to clear to get on the approved vendor list — and whether they're still on it years later. Getting approved by an aerospace or space customer is not a purchase order. It's an audit, a quality system review, and a first article process, and you can be removed from the list at any time. That's the part worth knowing about us.</p>
+    </div>
+    <div class="trio rev">
+      <div class="trio-col">
+        <div class="trio-n">Proof 01</div>
+        <h3>We pass customer audits</h3>
+        <p>Our quality system has been audited on site by customers in aerospace, space, and medical device — and we're still supplying all of them.</p>
+        <ul>
+          <li>On-site quality system audits</li>
+          <li>Document and revision control</li>
+          <li>Calibrated tooling records</li>
+          <li>Lot traceability</li>
+          <li>Corrective action process</li>
+          <li class="ph">__ audits passed since 20__</li>
+        </ul>
+      </div>
+      <div class="trio-col">
+        <div class="trio-n">Proof 02</div>
+        <h3>We handle the flowdowns</h3>
+        <p>The requirements your customer pushes onto you get pushed onto us, and we're set up to absorb them rather than ask for exceptions.</p>
+        <ul>
+          <li>AS9100 flowdown requirements</li>
+          <li>AS9102 first article inspection</li>
+          <li class="ph">ITAR registered</li>
+          <li>Certificate of conformance per lot</li>
+          <li>RoHS and REACH declarations</li>
+          <li>Domestic build — no offshore subcontracting</li>
+        </ul>
+      </div>
+      <div class="trio-col">
+        <div class="trio-n">Proof 03</div>
+        <h3>They keep coming back</h3>
+        <p>The strongest signal we can give you honestly. Nobody re-qualifies a supplier every year for a decade unless the parts keep arriving right.</p>
+        <ul>
+          <li class="ph">__% of revenue from repeat customers</li>
+          <li class="ph">Longest relationship: __ years</li>
+          <li class="ph">__% on-time delivery</li>
+          <li>Blanket orders and scheduled releases</li>
+          <li>Named contact on every job</li>
+          <li>References available on request</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-family:var(--mono);font-size:12px;color:#93A2AC;margin-top:20px;letter-spacing:.02em">References available on request — several customers who can't be named publicly will take a call.</p>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">The real proof</div>
+      <h2>Show the work instead</h2>
+      <p>A controls engineer can judge your craftsmanship from a photograph in about four seconds. Dressed wire, straight din rail, consistent labeling, clean harness boards — that's evidence no competitor can borrow, and it's the single highest-return thing on this page. Get a photographer into the shop for half a day.</p>
+    </div>
+    <div class="shots rev">
+      <div class="shot"><span>Open panel, door swung<br>Dressed wire, labeled terminals<br>Shot straight on</span></div>
+      <div class="shot"><span>Harness board mid-build<br>Layout and routing visible</span></div>
+      <div class="shot"><span>Machine on the floor<br>Guarding and HMI in frame</span></div>
+      <div class="shot"><span>Hoffman ModCenter<br>Enclosure being machined</span></div>
+      <div class="shot"><span>Technician at the bench<br>Crimping or inspecting</span></div>
+      <div class="shot"><span>Finished panel bank<br>Before crating and ship</span></div>
+    </div>
+    <p style="font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:20px;letter-spacing:.02em">Blur or omit customer nameplates and legend text where required. The workmanship is the point, not the nameplate.</p>
+  </div></section>
+
+  <section class="rfq" id="rfq-4"><div class="wrap"><div class="rfq-grid">
+    <div class="rev">
+      <div class="sec-kicker">Start here</div>
+      <h2>Not sure which of the three you need?</h2>
+      <p style="color:var(--muted)">Plenty of customers come to us for one capability and end up using two or three. Tell us what you're trying to build and we'll tell you which parts we'd handle — including the parts we wouldn't.</p>
+      <ul class="check">
+        <li>Your industry <span>It usually determines the standard and documentation required</span></li>
+        <li>What you're building or fixing <span>A machine, a panel, a harness, or a whole line</span></li>
+        <li>Any customer specs flowing down to you <span>AS9100, ITAR, IPC class, UL requirements</span></li>
+        <li>Quantity and schedule <span>One-off, prototype, or repeating production</span></li>
+        <li>Drawings, photos, or samples <span>Whatever you have — a phone photo is a fine start</span></li>
+      </ul>
+    </div>
+    <div class="form rev">
+      <div class="row2">
+        <div class="field"><label for="n4">Name</label><input id="n4" type="text"></div>
+        <div class="field"><label for="c4">Company</label><input id="c4" type="text"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="e4">Email</label><input id="e4" type="email"></div>
+        <div class="field"><label for="p4">Phone</label><input id="p4" type="tel"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="i4">Industry</label>
+          <select id="i4"><option>Aerospace &amp; Defense</option><option>Space &amp; Launch</option><option>Entertainment &amp; Theme Park</option><option>Medical Device</option><option>Food &amp; Beverage</option><option>Semiconductor</option><option>Industrial OEM</option><option>Other</option></select>
+        </div>
+        <div class="field"><label for="k4">What you need</label>
+          <select id="k4"><option>Control panel</option><option>Automation machine</option><option>Wire harness</option><option>More than one</option><option>Not sure yet</option></select>
+        </div>
+      </div>
+      <div class="field"><label for="m4">Tell us what you're building</label><textarea id="m4" rows="4" placeholder="The application, the problem, any specs flowing down to you…"></textarea></div>
+      <div class="field"><label for="f4">Attach drawings, specs, or photos</label><input id="f4" type="file"></div>
+      <button class="btn btn-dark" type="button" style="width:100%">Send it over</button>
+      <p class="form-note">An engineer reads every submission. If we're not the right shop for it, we'll say so and point you somewhere better.</p>
+    </div>
+  </div></div></section>
+
+  <footer><div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px">RAM<span>/</span>AUTOMATION</div>
+        <p style="margin:0">581 Tamarack Ave<br>Brea, CA 92821<br><a href="tel:7146724726" style="display:inline">(714) 672-4726</a></p>
+        <div class="certs"><span class="cert">UL 508A</span><span class="cert">IPC/WHMA-A-620</span><span class="cert ph">ISO 9001</span><span class="cert ph">ITAR</span></div>
+      </div>
+      <div><h4>Capabilities</h4><a href="#">Control panels</a><a href="#">Automation machines</a><a href="#">Wire harness</a><a href="#">Retrofit &amp; upgrade</a><a href="#">System integration</a></div>
+      <div><h4>Industries</h4><a href="#">Aerospace &amp; defense</a><a href="#">Space &amp; launch</a><a href="#">Entertainment</a><a href="#">Medical device</a><a href="#">Food &amp; beverage</a><a href="#">Semiconductor</a></div>
+      <div><h4>Resources</h4><a href="#">Capability sheets (PDF)</a><a href="#">IPC class buyer's guide</a><a href="#">RFQ checklist</a><a href="#">Careers</a></div>
+    </div>
+    <div class="f-bot"><span>© 2026 Ram Automation</span><span>Brea, California — serving Southern California and nationwide</span></div>
+  </div></footer>
+</div>
+
+<!-- ============================================================ -->
+<!-- PAGE 04 — RETROFIT & SYSTEM INTEGRATION                       -->
+<!-- ============================================================ -->
+<div class="page" id="p-retrofit">
+
+  <nav class="nav"><div class="nav-in">
+    <div class="brand">RAM<span>/</span>AUTOMATION</div>
+    <div class="nav-links">
+      <a href="#">Control Panels</a>
+      <a href="#">Automation Machines</a>
+      <a href="#">Wire Harness</a>
+      <a href="#" class="on">Retrofit &amp; Integration</a>
+      <a href="#">Industries</a>
+    </div>
+    <div class="nav-right">
+      <a class="nav-tel" href="tel:7146724726">(714) 672-4726</a>
+      <a class="btn btn-amber" href="#rfq-5">Request a quote</a>
+    </div>
+  </div></nav>
+
+  <div class="titleblock"><div class="wrap">
+    <div class="tb-cell">Capability <b>04</b></div>
+    <div class="tb-cell">Retrofit &amp; system integration</div>
+    <div class="tb-cell">Field service <b>on site</b></div>
+    <div class="tb-cell">Brea, CA</div>
+    <div class="tb-cell">Rev <b>2026.1</b></div>
+  </div></div>
+
+  <header class="hero"><div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Retrofit &amp; System Integration</div>
+        <h1>The machine is fine.<br>The controls are <em>from 1994</em>.</h1>
+        <p class="hero-sub">A mechanically sound machine with a dead PLC is not a machine you have to replace. We strip the obsolete controls and electrical system out, design and build a new one around current components, write the code, and start it up on your floor — often for a fraction of what the replacement machine costs, and without retraining anyone on new mechanics.</p>
+        <div class="hero-cta">
+          <a class="btn btn-amber" href="#rfq-5">Get a retrofit assessment</a>
+          <a class="btn btn-ghost" href="#obs-5">Is my system obsolete?</a>
+        </div>
+      </div>
+      <div class="facts">
+        <h3>At a glance</h3>
+        <dl style="margin:0">
+          <div class="fact"><dt>Typical cost</dt><dd class="ph">30–50%<small>of a replacement machine</small></dd></div>
+          <div class="fact"><dt>Machine size</dt><dd class="ph">Up to 20+ ft<small>in house or on site</small></dd></div>
+          <div class="fact"><dt>Planned downtime</dt><dd class="ph">1 weekend<small>typical, staged cutover</small></dd></div>
+          <div class="fact"><dt>Electrical design</dt><dd>In house<small>AutoCAD Electrical</small></dd></div>
+          <div class="fact"><dt>Programming</dt><dd>In house<small>PLC / HMI / drives</small></dd></div>
+          <div class="fact"><dt>Field service</dt><dd>Yes<small>wiring, integration, startup</small></dd></div>
+        </dl>
+      </div>
+    </div>
+    <div style="height:60px"></div>
+  </div></header>
+
+  <section><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Two ways customers arrive</div>
+      <h2>Old controls, or no controls</h2>
+      <p>Both start the same way — an engineer walks the machine with you — but they're different scopes and they get quoted differently.</p>
+    </div>
+    <div class="paths rev">
+      <div class="path">
+        <div class="path-tag">Path A</div>
+        <h3>Control system retrofit</h3>
+        <p>The machine still does its job mechanically. The controls are obsolete, unsupported, or failing — and the person who understood the old program has retired.</p>
+        <h4>What we remove</h4>
+        <ul>
+          <li>Obsolete PLC and I/O</li>
+          <li>Legacy drives and motor starters</li>
+          <li>Text or CRT operator interfaces</li>
+          <li>Hardwired relay logic</li>
+          <li>Undocumented field wiring</li>
+        </ul>
+        <h4>What we install</h4>
+        <ul>
+          <li>New UL 508A panel with current components</li>
+          <li>Modern PLC, HMI, and drives — parts available again</li>
+          <li>New field wiring, harnesses, and labeling</li>
+          <li>Safety circuit brought to current practice</li>
+          <li>Complete AutoCAD drawing set — often the first the machine has ever had</li>
+        </ul>
+      </div>
+      <div class="path alt">
+        <div class="path-tag">Path B</div>
+        <h3>System integration</h3>
+        <p>Your mechanical system is built — by your team, a fabricator, or a machine builder — and it has no electrical system or code. We make it run.</p>
+        <h4>You provide</h4>
+        <ul>
+          <li>The mechanical assembly</li>
+          <li>Sequence of operation, or a description of it</li>
+          <li>Product and recipe requirements</li>
+          <li>Plant standards: PLC brand, network, safety</li>
+        </ul>
+        <h4>We deliver</h4>
+        <ul>
+          <li>Electrical design and AutoCAD drawing package</li>
+          <li>UL 508A control panel, built in house</li>
+          <li>PLC, HMI, and drive programming to your spec</li>
+          <li>Custom recipe system for product changeover</li>
+          <li>On-site wiring, integration, and commissioning</li>
+        </ul>
+      </div>
+    </div>
+  </div></section>
+
+  <div class="dim"></div>
+
+  <section id="obs-5"><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Obsolescence check</div>
+      <h2>If your machine runs any of this, start planning</h2>
+      <p>None of these stop working the day they're discontinued. What happens is quieter: spare parts move to the used market, prices climb, support ends, and a failure that used to mean an afternoon becomes a six-week hunt on eBay. The time to retrofit is while the machine is still running.</p>
+    </div>
+    <div class="sheet rev">
+      <table>
+        <caption>Legacy platform migration paths</caption>
+        <thead><tr><th>What you have now</th><th>Support status</th><th>Typical migration</th></tr></thead>
+        <tbody>
+          <tr><td>Allen-Bradley PLC-5</td><td class="num">Discontinued</td><td>ControlLogix or CompactLogix</td></tr>
+          <tr><td>Allen-Bradley SLC 500</td><td class="num">Discontinued</td><td>CompactLogix</td></tr>
+          <tr><td>PanelView Standard / text terminals</td><td class="num">Discontinued</td><td>PanelView Plus with recipe screens</td></tr>
+          <tr><td>Siemens S5</td><td class="num">Obsolete</td><td>S7-1500, TIA Portal</td></tr>
+          <tr><td>Siemens S7-300 / S7-400</td><td class="num">Limited support</td><td>S7-1500</td></tr>
+          <tr><td>Hardwired relay logic</td><td class="num">No diagnostics</td><td>PLC with safety relay or safety PLC</td></tr>
+          <tr><td>Analog or DC drives</td><td class="num">Parts scarce</td><td>Modern AC VFD or servo</td></tr>
+          <tr><td>Proprietary motion controllers</td><td class="num">Unsupported</td><td>Integrated motion over EtherCAT or EtherNet/IP</td></tr>
+          <tr><td>No drawings at all</td><td class="num">Common</td><td>We reverse engineer and produce the set</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:18px;letter-spacing:.02em">Verify current manufacturer support status before publishing — these change. This table is one of the highest-value SEO assets on the site; engineers search these part numbers by name.</p>
+  </div></section>
+
+  <section class="band" style="padding:76px 0"><div class="wrap">
+    <div class="sec-head rev" style="max-width:76ch">
+      <div class="eyebrow">The part everyone actually worries about</div>
+      <h2 style="color:#fff">How long is my line down?</h2>
+      <p style="color:#C3CDD4">This is the real question behind every retrofit quote, and most integrators answer it vaguely. We plan the cutover before we quote, because the answer determines whether the project is worth doing at all. The new panel is built, wired, and fully tested in our shop against a simulated machine — so the work that happens on your floor is disconnect, mount, land wires, and start up.</p>
+    </div>
+    <div class="trio rev">
+      <div class="trio-col">
+        <div class="trio-n">Before shutdown</div>
+        <h3>Everything possible, off-line</h3>
+        <p>The goal is that nothing gets discovered during the shutdown window.</p>
+        <ul>
+          <li>Machine surveyed and documented</li>
+          <li>Panel built and tested in our shop</li>
+          <li>Code written and simulated</li>
+          <li>Harnesses pre-built and labeled</li>
+          <li>Conduit and tray pre-run where possible</li>
+          <li>Spare parts staged on site</li>
+        </ul>
+      </div>
+      <div class="trio-col">
+        <div class="trio-n">During shutdown</div>
+        <h3>Staged cutover</h3>
+        <p>Scheduled around your production calendar — usually a weekend or a planned maintenance window.</p>
+        <ul>
+          <li>Old controls removed</li>
+          <li>New panel mounted and landed</li>
+          <li>Field devices reterminated</li>
+          <li>Point-to-point verification</li>
+          <li>Powered checkout, dry cycle</li>
+          <li>First production parts run with us present</li>
+        </ul>
+      </div>
+      <div class="trio-col">
+        <div class="trio-n">After startup</div>
+        <h3>We don't leave at 5pm</h3>
+        <p>Our engineers stay through the first production shift, then stay reachable after that.</p>
+        <ul>
+          <li>Operator and maintenance training</li>
+          <li>Tuning against real product</li>
+          <li>As-built drawings updated on site</li>
+          <li>Recipes built and saved with your team</li>
+          <li>Spare parts list handed over</li>
+          <li>Remote support access, optional</li>
+        </ul>
+      </div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Architecture</div>
+      <h2>When the machine is too long to bring to us</h2>
+      <p>Plenty of the equipment we retrofit can't be crated and shipped — it's 20, 40, 60 feet of line bolted to a plant floor. That changes the electrical architecture, not just the logistics.</p>
+    </div>
+    <div class="paths rev">
+      <div class="path">
+        <div class="path-tag">The old way</div>
+        <h3>One central panel</h3>
+        <p>Every sensor, valve, and motor home-runs back to a single enclosure at one end of the machine.</p>
+        <h4>What that costs you</h4>
+        <ul>
+          <li>Hundreds of long wire runs end to end</li>
+          <li>Large conduit and cable tray fills</li>
+          <li>Days of on-site pulling and terminating</li>
+          <li>A fault at one end means walking to the other to troubleshoot</li>
+          <li>Adding a device later means a new run the full length</li>
+        </ul>
+      </div>
+      <div class="path alt">
+        <div class="path-tag">How we build it</div>
+        <h3>Distributed I/O over Ethernet</h3>
+        <p>Small I/O nodes placed local to the devices they serve, linked back to the controller on a single industrial Ethernet run.</p>
+        <h4>What changes</h4>
+        <ul>
+          <li>Field wiring drops to short local runs</li>
+          <li>One network cable replaces the bundle down the machine</li>
+          <li>Install time and conduit cost fall sharply</li>
+          <li>Node-level diagnostics — the network tells you which section faulted</li>
+          <li>Adding a device later means wiring to the nearest node</li>
+          <li>Sections can be commissioned independently during cutover</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:18px;letter-spacing:.02em">EtherNet/IP, EtherCAT, PROFINET, or your existing plant standard. Architecture is decided during the survey, before the quote.</p>
+  </div></section>
+
+  <div class="dim"></div>
+
+  <section><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Datasheet</div>
+      <h2>Retrofit &amp; integration capability</h2>
+    </div>
+    <div class="sheet rev">
+      <table>
+        <caption>Retrofit and system integration — Rev 2026.1</caption>
+        <thead><tr><th>Parameter</th><th>Capability</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Machine size</td><td class="num">No practical limit</td><td>Retrofit in our facility, or on your floor when the machine can't move</td></tr>
+          <tr><td>Architecture</td><td class="num">Central panel or distributed I/O</td><td>Distributed nodes on long machines to cut end-to-end wiring</td></tr>
+          <tr><td>Electrical design</td><td class="num">AutoCAD Electrical — in house</td><td>Including reverse engineering machines with no drawings</td></tr>
+          <tr><td>Control panel</td><td class="num">New UL 508A panel</td><td>Built and labeled in house, enclosure machined on ModCenter</td></tr>
+          <tr><td>PLC platforms</td><td class="num">Allen-Bradley, Siemens, Omron, Beckhoff, Mitsubishi</td><td>Migration from PLC-5, SLC 500, S5, and relay logic</td></tr>
+          <tr><td>HMI</td><td class="num">Modern color HMI with recipe management</td><td>Screens designed with your operators, not just for them</td></tr>
+          <tr><td>Recipe systems</td><td class="num">Custom recipe and product changeover</td><td>Stored parameters, versioning, operator access levels</td></tr>
+          <tr><td>Drives</td><td class="num">VFD and servo replacement, tuned and commissioned</td><td>Legacy analog and DC drive conversion</td></tr>
+          <tr><td>Industrial networks</td><td class="num">EtherCAT, EtherNet/IP, PROFINET, PROFIBUS, Modbus TCP/RTU</td><td>Integration with existing plant networks and SCADA</td></tr>
+          <tr><td>Safety</td><td class="num">Safety circuit brought to current practice</td><td>Guarding, light curtains, e-stop, safety relay or safety PLC</td></tr>
+          <tr><td>Field wiring</td><td class="num">On-site wiring and integration</td><td>Our technicians, not a subcontracted electrician</td></tr>
+          <tr><td>Data</td><td class="num">Production data logging and reporting</td><td>Integration to MES, historian, or plant database</td></tr>
+          <tr><td>Documentation</td><td class="num">Full as-built package</td><td>Drawings, unlocked code, O&amp;M manual, spare parts list</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Sequence</div>
+      <h2>How a retrofit runs</h2>
+    </div>
+    <div class="steps rev">
+      <div class="step"><div class="step-n">STAGE 01</div><h3>Survey</h3><p>An engineer walks the machine, documents what's there, and identifies what has to be replaced versus what can stay.</p><div class="step-time ph">1 day on site</div></div>
+      <div class="step"><div class="step-n">STAGE 02</div><h3>Scope &amp; quote</h3><p>Fixed scope, fixed component list, and a written cutover plan with the downtime window stated up front.</p><div class="step-time ph">1–2 weeks</div></div>
+      <div class="step"><div class="step-n">STAGE 03</div><h3>Design</h3><p>AutoCAD drawing package produced and approved — often the first complete set the machine has ever had.</p><div class="step-time ph">2–4 weeks</div></div>
+      <div class="step"><div class="step-n">STAGE 04</div><h3>Build &amp; simulate</h3><p>Panel built and tested, code written and run against a simulated machine, harnesses pre-made and labeled.</p><div class="step-time ph">4–8 weeks</div></div>
+      <div class="step"><div class="step-n">STAGE 05</div><h3>Cutover &amp; startup</h3><p>Old controls out, new controls in, verified and running. We stay through the first production shift.</p><div class="step-time ph">Typically 1 weekend</div></div>
+    </div>
+  </div></section>
+
+  <div class="dim"></div>
+
+  <section><div class="wrap">
+    <div class="sec-head rev">
+      <div class="sec-kicker">Selected work</div>
+      <h2>Machines we brought back</h2>
+      <p>Replace with real jobs. For retrofit buyers the persuasive numbers are downtime, cost versus replacement, and uptime after.</p>
+    </div>
+    <div class="proof rev">
+      <div class="pcard">
+        <div class="pcard-tag">Food &amp; Beverage</div>
+        <h3>20 ft packaging line retrofit</h3>
+        <p>Stripped obsolete controls from a full-length packaging line, installed a new UL 508A panel and modern HMI with recipe changeover, and cut over during a planned weekend shutdown.</p>
+        <div class="metric"><div class="metric-v ph">1 weekend</div><div class="metric-l">total production downtime</div></div>
+      </div>
+      <div class="pcard">
+        <div class="pcard-tag">Industrial OEM</div>
+        <h3>Customer-built machine, our controls</h3>
+        <p>Customer fabricated the mechanical system and had no electrical design. We engineered the panel, wrote the code and recipe system, and integrated it on their floor.</p>
+        <div class="metric"><div class="metric-v ph">14 weeks</div><div class="metric-l">mechanicals to production</div></div>
+      </div>
+      <div class="pcard">
+        <div class="pcard-tag">Consumer Products</div>
+        <h3>Relay logic to safety PLC</h3>
+        <p>Replaced hardwired relay logic and an unsupported drive with a modern PLC, servo drives, and a safety-rated circuit — keeping the original machine frame.</p>
+        <div class="metric"><div class="metric-v ph">40%</div><div class="metric-l">of replacement machine cost</div></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section style="padding-bottom:0"><div class="wrap">
+    <div class="sec-head rev"><div class="sec-kicker">Questions we get weekly</div><h2>Before you replace the machine</h2></div>
+  </div>
+  <div class="faq">
+    <div class="wrap" style="padding:0">
+      <details><summary>Should I retrofit or just buy a new machine?</summary><p>It depends almost entirely on the mechanical condition. If the frame, drives, and tooling are sound and the machine still makes good parts, a retrofit typically runs a fraction of replacement cost, keeps a footprint your plant is already laid out for, and doesn't require retraining operators on new mechanics. If the mechanics are worn out or the process itself needs to change, a retrofit is money spent on a machine that will still be limited afterward — and we'll tell you that during the survey.</p></details>
+      <details><summary>We have no drawings for this machine. Can you still do it?</summary><p>Yes, and it's extremely common. Part of the survey is reverse engineering what's actually installed rather than what someone thinks is installed. You end up with a complete AutoCAD package — frequently the first accurate documentation the machine has ever had, which is worth something on its own the next time anything goes wrong.</p></details>
+      <details><summary>How long will my line actually be down?</summary><p>For most retrofits, one planned weekend or maintenance window. That's achievable because the panel is built and the code is written and simulated before anyone touches your machine. We commit to a downtime window in the quote rather than discovering it during the shutdown — and if a machine can't be done in a weekend, you'll hear that before you sign, not after.</p></details>
+      <details><summary>Can you write recipes for different products?</summary><p>Yes, and it's usually one of the biggest practical wins of a retrofit. Instead of an operator dialing in settings from memory or a laminated sheet, product parameters get stored, named, version-controlled, and recalled from the HMI. Changeover gets faster and far more repeatable, and it removes a common source of scrap.</p></details>
+      <details><summary>Do you do the field wiring, or do we hire an electrician?</summary><p>We do it. Our technicians handle on-site wiring, integration, and startup, which matters more than it sounds — when the people who designed the panel are the ones landing the wires, problems get solved on the spot instead of turning into a scheduling conversation between two vendors.</p></details>
+      <details><summary>What if we already built the machine ourselves?</summary><p>That's Path B, and it's a large share of our work. Send us the mechanical system and a description of how it should behave, and we handle the electrical design, panel, programming, recipes, and field integration. You don't need a written spec to start — a walkthrough of the machine is usually enough.</p></details>
+    </div>
+  </div>
+  </section>
+
+  <section class="rfq" id="rfq-5"><div class="wrap"><div class="rfq-grid">
+    <div class="rev">
+      <div class="sec-kicker">Request an assessment</div>
+      <h2>Send a photo of the panel. That's genuinely enough to start.</h2>
+      <p style="color:var(--muted)">Most retrofit conversations begin with someone photographing the inside of an old control cabinet on their phone. If you can add any of the below, the assessment gets sharper.</p>
+      <ul class="check">
+        <li>Photos of the existing panel and machine <span>Door open, plus a wide shot of the machine</span></li>
+        <li>PLC and drive part numbers <span>Read them off the labels — that alone tells us a lot</span></li>
+        <li>Any drawings you have <span>Even incomplete or marked-up ones from decades ago</span></li>
+        <li>What the machine does <span>And what it's supposed to do that it currently can't</span></li>
+        <li>Products and changeovers <span>How many recipes, how often you switch</span></li>
+        <li>Acceptable downtime window <span>Weekend, holiday shutdown, or fully scheduled</span></li>
+        <li>Plant standards <span>Preferred PLC brand and network, if you have one</span></li>
+      </ul>
+    </div>
+    <div class="form rev">
+      <div class="row2">
+        <div class="field"><label for="n5">Name</label><input id="n5" type="text"></div>
+        <div class="field"><label for="c5">Company</label><input id="c5" type="text"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="e5">Email</label><input id="e5" type="email"></div>
+        <div class="field"><label for="p5">Phone</label><input id="p5" type="tel"></div>
+      </div>
+      <div class="field"><label for="t5">Which describes your situation?</label>
+        <select id="t5"><option>Obsolete controls on a working machine</option><option>Mechanical system built, needs controls</option><option>Machine runs but needs new capability or recipes</option><option>Controls failing intermittently</option><option>Not sure — need an assessment</option></select>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="l5">Machine length</label><input id="l5" type="text" placeholder="approx. ft"></div>
+        <div class="field"><label for="w5">Downtime window</label><input id="w5" type="text" placeholder="weekend, shutdown…"></div>
+      </div>
+      <div class="field"><label for="m5">What's on the machine now</label><textarea id="m5" rows="4" placeholder="PLC and drive part numbers if you have them, what it does, what's failing…"></textarea></div>
+      <div class="field"><label for="f5">Attach panel photos or drawings</label><input id="f5" type="file"></div>
+      <button class="btn btn-dark" type="button" style="width:100%">Request assessment</button>
+      <p class="form-note">An engineer reviews it and calls you back. If the honest answer is that replacing the machine beats retrofitting it, we'll tell you that on the call.</p>
+    </div>
+  </div></div></section>
+
+  <footer><div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px">RAM<span>/</span>AUTOMATION</div>
+        <p style="margin:0">581 Tamarack Ave<br>Brea, CA 92821<br><a href="tel:7146724726" style="display:inline">(714) 672-4726</a></p>
+        <div class="certs"><span class="cert">UL 508A</span><span class="cert">IPC/WHMA-A-620</span><span class="cert ph">ISO 9001</span><span class="cert ph">ITAR</span></div>
+      </div>
+      <div><h4>Capabilities</h4><a href="#">Control panels</a><a href="#">Automation machines</a><a href="#">Wire harness</a><a href="#">Retrofit &amp; integration</a><a href="#">Field service</a></div>
+      <div><h4>Retrofit</h4><a href="#">PLC-5 migration</a><a href="#">SLC 500 migration</a><a href="#">Siemens S5 migration</a><a href="#">Relay logic replacement</a><a href="#">Drive replacement</a></div>
+      <div><h4>Resources</h4><a href="#">Capability sheets (PDF)</a><a href="#">Obsolescence checklist</a><a href="#">RFQ checklist</a><a href="#">Careers</a></div>
+    </div>
+    <div class="f-bot"><span>© 2026 Ram Automation</span><span>Brea, California — serving Southern California and nationwide</span></div>
+  </div></footer>
+</div>
+
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.tab');
+  var pages = document.querySelectorAll('.page');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.setAttribute('aria-selected','false'); });
+      t.setAttribute('aria-selected','true');
+      pages.forEach(function(p){ p.classList.remove('is-on'); });
+      document.getElementById(t.dataset.go).classList.add('is-on');
+      window.scrollTo({top:0, behavior:'instant'});
+      run();
+    });
+  });
+  function run(){
+    var els = document.querySelectorAll('.page.is-on .rev');
+    if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in');}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    },{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){ io.observe(e); });
+  }
+  run();
+})();
+</script>

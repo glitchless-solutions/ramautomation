@@ -1,0 +1,348 @@
+/* ==========================================================================
+   Ram Automation — design tokens + global primitives
+   Brand palette: #F47E1F  #2D3142  #4F5D75  #BFC0C0  #FFFFFF
+   Component styles live next to each component as CSS Modules.
+   ========================================================================== */
+
+:root {
+  /* Brand palette */
+  --orange: #f47e1f;
+  --navy: #2d3142;
+  --slate: #4f5d75;
+  --silver: #bfc0c0;
+  --white: #ffffff;
+
+  /* Roles */
+  --accent: var(--orange);
+  --accent-hover: #ff9443;
+  --accent-text: #b55309; /* orange that passes AA as small text on white */
+  --ink: var(--navy);
+  --ink-deep: #242737; /* title block, darkest strip */
+  --ink-raised: #363b50; /* panels sitting on navy */
+  --ink-line: #4a5068; /* borders on navy */
+  --ink-line-soft: #3d4257;
+  --steel: var(--slate);
+  --paper: #eeefef;
+  --paper-2: #f6f6f6;
+  --card: var(--white);
+  --rule: var(--silver);
+  --rule-soft: #dcdddd;
+  --muted: #565e72;
+  --on-dark: var(--white);
+  --on-dark-muted: #cdd0d8;
+  --on-dark-dim: #a8adbd;
+
+  /* Type (variables set by next/font in layout.js) */
+  --disp: var(--font-disp), 'Arial Narrow', sans-serif;
+  --body: var(--font-body), system-ui, -apple-system, sans-serif;
+  --mono: var(--font-mono), ui-monospace, Menlo, monospace;
+
+  --maxw: 1180px;
+  --gutter: 24px;
+  --radius: 2px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ---------- headings ---------- */
+h1,
+h2,
+h3 {
+  font-family: var(--disp);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: clamp(38px, 5.2vw, 68px);
+  line-height: 0.96;
+  letter-spacing: 0.005em;
+  margin-bottom: 22px;
+}
+
+h1 em,
+h2 em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: clamp(28px, 3.4vw, 42px);
+  line-height: 1.02;
+  margin-bottom: 14px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+/* ---------- sections ---------- */
+.section {
+  padding: 76px 0;
+}
+.section--flush-top {
+  padding-top: 0;
+}
+.section--flush-bottom {
+  padding-bottom: 0;
+}
+.section--dark {
+  background: var(--ink);
+  color: var(--on-dark);
+}
+
+.sec-head {
+  margin-bottom: 38px;
+  max-width: 70ch;
+}
+.sec-head--wide {
+  max-width: 76ch;
+}
+.sec-head p {
+  color: var(--muted);
+  font-size: 16.5px;
+  margin: 0;
+}
+.section--dark .sec-head p {
+  color: var(--on-dark-muted);
+}
+
+.kicker {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 12px;
+}
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.note {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  margin: 20px 0 0;
+  max-width: 90ch;
+}
+.section--dark .note {
+  color: var(--on-dark-dim);
+}
+.prose-note {
+  font-size: 14.5px;
+  color: var(--muted);
+  margin: 18px 0 0;
+  max-width: 80ch;
+}
+.prose-note strong {
+  color: var(--ink);
+}
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 12px 18px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  line-height: 1.4;
+  transition: background-color 0.15s ease;
+}
+.btn--accent {
+  background: var(--accent);
+  color: var(--ink);
+}
+.btn--accent:hover {
+  background: var(--accent-hover);
+}
+.btn--ghost {
+  border-color: currentColor;
+  color: inherit;
+  background: transparent;
+}
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.btn--dark {
+  background: var(--ink);
+  color: var(--on-dark);
+}
+.btn--dark:hover {
+  background: var(--slate);
+}
+.btn[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+/* ---------- dimension-line divider (mockup signature) ---------- */
+.dim {
+  height: 1px;
+  background: var(--rule);
+  position: relative;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+.dim::before,
+.dim::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  width: 1px;
+  height: 9px;
+  background: var(--rule);
+}
+.dim::before {
+  left: 0;
+}
+.dim::after {
+  right: 0;
+}
+
+/* ---------- placeholder figures ([[…]] in content JSON) ---------- */
+.ph {
+  background: rgba(244, 126, 31, 0.2);
+  border-bottom: 1px dashed var(--accent);
+  padding: 0 3px;
+}
+
+/* ---------- links in rich text ---------- */
+.rich-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+/* ---------- accessibility ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 200;
+  background: var(--accent);
+  color: var(--ink);
+  padding: 10px 14px;
+  font-family: var(--mono);
+  font-size: 12px;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 12px;
+}
+
+/* ---------- reveal on scroll ----------
+   Only hidden once JS has run (html.js), so crawlers and no-JS readers
+   always get fully visible content. */
+.js .rev {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+.js .rev.in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .rev {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 56px 0;
+  }
+  .section--flush-top {
+    padding-top: 0;
+  }
+  .section--flush-bottom {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --gutter: 16px;
+  }
+}

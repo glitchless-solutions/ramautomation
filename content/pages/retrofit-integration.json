@@ -1,0 +1,255 @@
+{
+  "slug": "retrofit-integration",
+  "nav": { "label": "Retrofit & Integration" },
+  "seo": {
+    "title": "Control System Retrofit & PLC Migration — PLC-5, SLC 500, S5",
+    "description": "Retrofit obsolete machine controls instead of replacing the machine. PLC-5, SLC 500, Siemens S5 and relay-logic migration, new UL 508A panel, HMI with recipes, drives, distributed I/O and on-site cutover — typically one weekend of downtime. System integration for customer-built machines.",
+    "ogImage": null,
+    "dateModified": "2026-11-21"
+  },
+  "schema": {
+    "type": "Service",
+    "name": "Machine control retrofit and system integration",
+    "serviceType": "Industrial control system retrofit and integration"
+  },
+  "titleBlock": [
+    { "text": "Capability", "bold": "04" },
+    { "text": "Retrofit & system integration" },
+    { "text": "Field service", "bold": "on site" },
+    { "text": "Brea, CA" },
+    { "text": "Rev", "bold": "2026.1" }
+  ],
+  "sections": [
+    {
+      "type": "hero",
+      "eyebrow": "Retrofit & System Integration",
+      "title": "The machine is fine.\nThe controls are *from 1994*.",
+      "text": "A mechanically sound machine with a dead PLC is not a machine you have to replace. We strip the obsolete controls and electrical system out, design and build a new one around current components, write the code, and start it up on your floor — often for a fraction of what the replacement machine costs, and without retraining anyone on new mechanics.",
+      "ctas": [
+        { "label": "Get a retrofit assessment", "href": "#rfq", "style": "accent" },
+        { "label": "Is my system obsolete?", "href": "#obsolescence", "style": "ghost" }
+      ],
+      "facts": {
+        "heading": "At a glance",
+        "items": [
+          { "term": "Typical cost", "value": "[[30–50%]]", "detail": "of a replacement machine" },
+          { "term": "Machine size", "value": "[[Up to 20+ ft]]", "detail": "in house or on site" },
+          { "term": "Planned downtime", "value": "[[1 weekend]]", "detail": "typical, staged cutover" },
+          { "term": "Electrical design", "value": "In house", "detail": "AutoCAD Electrical" },
+          { "term": "Programming", "value": "In house", "detail": "PLC / HMI / drives" },
+          { "term": "Field service", "value": "Yes", "detail": "wiring, integration, startup" }
+        ]
+      }
+    },
+    {
+      "type": "paths",
+      "kicker": "Two ways customers arrive",
+      "heading": "Old controls, or no controls",
+      "intro": "Both start the same way — an engineer walks the machine with you — but they're different scopes and they get quoted differently.",
+      "cards": [
+        {
+          "tag": "Path A",
+          "title": "Control system retrofit",
+          "text": "The machine still does its job mechanically. The controls are obsolete, unsupported, or failing — and the person who understood the old program has retired.",
+          "lists": [
+            { "heading": "What we remove", "items": ["Obsolete PLC and I/O", "Legacy drives and motor starters", "Text or CRT operator interfaces", "Hardwired relay logic", "Undocumented field wiring"] },
+            { "heading": "What we install", "items": ["New UL 508A panel with current components", "Modern PLC, HMI, and drives — parts available again", "New field wiring, harnesses, and labeling", "Safety circuit brought to current practice", "Complete AutoCAD drawing set — often the first the machine has ever had"] }
+          ]
+        },
+        {
+          "tag": "Path B",
+          "title": "System integration",
+          "accent": true,
+          "text": "Your mechanical system is built — by your team, a fabricator, or a machine builder — and it has no electrical system or code. We make it run.",
+          "lists": [
+            { "heading": "You provide", "items": ["The mechanical assembly", "Sequence of operation, or a description of it", "Product and recipe requirements", "Plant standards: PLC brand, network, safety"] },
+            { "heading": "We deliver", "items": ["Electrical design and AutoCAD drawing package", "UL 508A control panel, built in house", "PLC, HMI, and drive programming to your spec", "Custom recipe system for product changeover", "On-site wiring, integration, and commissioning"] }
+          ]
+        }
+      ]
+    },
+    { "type": "divider" },
+    {
+      "type": "datasheet",
+      "id": "obsolescence",
+      "_editorNote": "Verify current manufacturer support status before publishing — these change. Engineers search these part numbers by name, so this table is a high-value search asset.",
+      "kicker": "Obsolescence check",
+      "heading": "If your machine runs any of this, start planning",
+      "intro": "None of these stop working the day they're discontinued. What happens is quieter: spare parts move to the used market, prices climb, support ends, and a failure that used to mean an afternoon becomes a six-week hunt on eBay. The time to retrofit is while the machine is still running.",
+      "caption": "Legacy platform migration paths",
+      "columns": ["What you have now", "Support status", "Typical migration"],
+      "monoColumns": [1],
+      "rows": [
+        ["Allen-Bradley PLC-5", "Discontinued", "ControlLogix or CompactLogix"],
+        ["Allen-Bradley SLC 500", "Discontinued", "CompactLogix"],
+        ["PanelView Standard / text terminals", "Discontinued", "PanelView Plus with recipe screens"],
+        ["Siemens S5", "Obsolete", "S7-1500, TIA Portal"],
+        ["Siemens S7-300 / S7-400", "Limited support", "S7-1500"],
+        ["Hardwired relay logic", "No diagnostics", "PLC with safety relay or safety PLC"],
+        ["Analog or DC drives", "Parts scarce", "Modern AC VFD or servo"],
+        ["Proprietary motion controllers", "Unsupported", "Integrated motion over EtherCAT or EtherNet/IP"],
+        ["No drawings at all", "Common", "We reverse engineer and produce the set"]
+      ]
+    },
+    {
+      "type": "trio",
+      "eyebrow": "The part everyone actually worries about",
+      "heading": "How long is my line down?",
+      "intro": "This is the real question behind every retrofit quote, and most integrators answer it vaguely. We plan the cutover before we quote, because the answer determines whether the project is worth doing at all. The new panel is built, wired, and fully tested in our shop against a simulated machine — so the work that happens on your floor is disconnect, mount, land wires, and start up.",
+      "columns": [
+        {
+          "label": "Before shutdown",
+          "title": "Everything possible, off-line",
+          "text": "The goal is that nothing gets discovered during the shutdown window.",
+          "items": ["Machine surveyed and documented", "Panel built and tested in our shop", "Code written and simulated", "Harnesses pre-built and labeled", "Conduit and tray pre-run where possible", "Spare parts staged on site"]
+        },
+        {
+          "label": "During shutdown",
+          "title": "Staged cutover",
+          "text": "Scheduled around your production calendar — usually a weekend or a planned maintenance window.",
+          "items": ["Old controls removed", "New panel mounted and landed", "Field devices reterminated", "Point-to-point verification", "Powered checkout, dry cycle", "First production parts run with us present"]
+        },
+        {
+          "label": "After startup",
+          "title": "We don't leave at 5pm",
+          "text": "Our engineers stay through the first production shift, then stay reachable after that.",
+          "items": ["Operator and maintenance training", "Tuning against real product", "As-built drawings updated on site", "Recipes built and saved with your team", "Spare parts list handed over", "Remote support access, optional"]
+        }
+      ]
+    },
+    {
+      "type": "paths",
+      "kicker": "Architecture",
+      "heading": "When the machine is too long to bring to us",
+      "intro": "Plenty of the equipment we retrofit can't be crated and shipped — it's 20, 40, 60 feet of line bolted to a plant floor. That changes the electrical architecture, not just the logistics.",
+      "cards": [
+        {
+          "tag": "The old way",
+          "title": "One central panel",
+          "text": "Every sensor, valve, and motor home-runs back to a single enclosure at one end of the machine.",
+          "lists": [
+            { "heading": "What that costs you", "items": ["Hundreds of long wire runs end to end", "Large conduit and cable tray fills", "Days of on-site pulling and terminating", "A fault at one end means walking to the other to troubleshoot", "Adding a device later means a new run the full length"] }
+          ]
+        },
+        {
+          "tag": "How we build it",
+          "title": "Distributed I/O over Ethernet",
+          "accent": true,
+          "text": "Small I/O nodes placed local to the devices they serve, linked back to the controller on a single industrial Ethernet run.",
+          "lists": [
+            { "heading": "What changes", "items": ["Field wiring drops to short local runs", "One network cable replaces the bundle down the machine", "Install time and conduit cost fall sharply", "Node-level diagnostics — the network tells you which section faulted", "Adding a device later means wiring to the nearest node", "Sections can be commissioned independently during cutover"] }
+          ]
+        }
+      ],
+      "note": "EtherNet/IP, EtherCAT, PROFINET, or your existing plant standard. Architecture is decided during the survey, before the quote."
+    },
+    { "type": "divider" },
+    {
+      "type": "datasheet",
+      "id": "specs",
+      "kicker": "Datasheet",
+      "heading": "Retrofit & integration capability",
+      "caption": "Retrofit and system integration — Rev 2026.1",
+      "columns": ["Parameter", "Capability", "Notes"],
+      "monoColumns": [1],
+      "rows": [
+        ["Machine size", "No practical limit", "Retrofit in our facility, or on your floor when the machine can't move"],
+        ["Architecture", "Central panel or distributed I/O", "Distributed nodes on long machines to cut end-to-end wiring"],
+        ["Electrical design", "AutoCAD Electrical — in house", "Including reverse engineering machines with no drawings"],
+        ["Control panel", "New UL 508A panel", "Built and labeled in house, enclosure machined on ModCenter"],
+        ["PLC platforms", "Allen-Bradley, Siemens, Omron, Beckhoff, Mitsubishi", "Migration from PLC-5, SLC 500, S5, and relay logic"],
+        ["HMI", "Modern color HMI with recipe management", "Screens designed with your operators, not just for them"],
+        ["Recipe systems", "Custom recipe and product changeover", "Stored parameters, versioning, operator access levels"],
+        ["Drives", "VFD and servo replacement, tuned and commissioned", "Legacy analog and DC drive conversion"],
+        ["Industrial networks", "EtherCAT, EtherNet/IP, PROFINET, PROFIBUS, Modbus TCP/RTU", "Integration with existing plant networks and SCADA"],
+        ["Safety", "Safety circuit brought to current practice", "Guarding, light curtains, e-stop, safety relay or safety PLC"],
+        ["Field wiring", "On-site wiring and integration", "Our technicians, not a subcontracted electrician"],
+        ["Data", "Production data logging and reporting", "Integration to MES, historian, or plant database"],
+        ["Documentation", "Full as-built package", "Drawings, unlocked code, O&M manual, spare parts list"]
+      ]
+    },
+    {
+      "type": "steps",
+      "flushTop": true,
+      "kicker": "Sequence",
+      "heading": "How a retrofit runs",
+      "items": [
+        { "label": "Stage 01", "title": "Survey", "text": "An engineer walks the machine, documents what's there, and identifies what has to be replaced versus what can stay.", "time": "[[1 day on site]]" },
+        { "label": "Stage 02", "title": "Scope & quote", "text": "Fixed scope, fixed component list, and a written cutover plan with the downtime window stated up front.", "time": "[[1–2 weeks]]" },
+        { "label": "Stage 03", "title": "Design", "text": "AutoCAD drawing package produced and approved — often the first complete set the machine has ever had.", "time": "[[2–4 weeks]]" },
+        { "label": "Stage 04", "title": "Build & simulate", "text": "Panel built and tested, code written and run against a simulated machine, harnesses pre-made and labeled.", "time": "[[4–8 weeks]]" },
+        { "label": "Stage 05", "title": "Cutover & startup", "text": "Old controls out, new controls in, verified and running. We stay through the first production shift.", "time": "[[Typically 1 weekend]]" }
+      ]
+    },
+    { "type": "divider" },
+    {
+      "type": "proof",
+      "_editorNote": "Sample jobs from the client mockup. Replace with real jobs. For retrofit buyers the persuasive numbers are downtime, cost versus replacement, and uptime after.",
+      "kicker": "Selected work",
+      "heading": "Machines we brought back",
+      "intro": "Measured the way retrofit buyers measure them: downtime, cost against replacement, and uptime after.",
+      "cards": [
+        { "tag": "Food & Beverage", "title": "20 ft packaging line retrofit", "text": "Stripped obsolete controls from a full-length packaging line, installed a new UL 508A panel and modern HMI with recipe changeover, and cut over during a planned weekend shutdown.", "metric": { "value": "[[1 weekend]]", "label": "total production downtime" } },
+        { "tag": "Industrial OEM", "title": "Customer-built machine, our controls", "text": "Customer fabricated the mechanical system and had no electrical design. We engineered the panel, wrote the code and recipe system, and integrated it on their floor.", "metric": { "value": "[[14 weeks]]", "label": "mechanicals to production" } },
+        { "tag": "Consumer Products", "title": "Relay logic to safety PLC", "text": "Replaced hardwired relay logic and an unsupported drive with a modern PLC, servo drives, and a safety-rated circuit — keeping the original machine frame.", "metric": { "value": "[[40%]]", "label": "of replacement machine cost" } }
+      ]
+    },
+    {
+      "type": "gallery",
+      "flushTop": true,
+      "kicker": "From the field",
+      "heading": "Before, after, and integrated",
+      "items": [
+        { "src": "/images/work/retrofit/01.jpg", "alt": "Before retrofit: aging machine with original relay-based control panel and worn wiring", "width": 550, "height": 350, "caption": "Before" },
+        { "src": "/images/work/retrofit/02.jpg", "alt": "After retrofit: the same machine refurbished with a new control panel and clean wiring", "width": 550, "height": 350, "caption": "After" },
+        { "src": "/images/work/integration/02.jpg", "alt": "Long production line integrated with a new operator station and HMI pendant", "width": 550, "height": 350 },
+        { "src": "/images/work/integration/04.jpg", "alt": "Heavy legacy industrial machine with new controls integrated", "width": 550, "height": 350 },
+        { "src": "/images/work/integration/01.jpg", "alt": "Bench-top automated test station with HMI touchscreen and vision sensor", "width": 550, "height": 350 },
+        { "src": "/images/work/retrofit/03.jpg", "alt": "New stepper motor and ball-screw actuator installed on a retrofitted web-handling machine", "width": 550, "height": 350 }
+      ]
+    },
+    {
+      "type": "faq",
+      "kicker": "Questions we get weekly",
+      "heading": "Before you replace the machine",
+      "items": [
+        { "q": "Should I retrofit or just buy a new machine?", "a": "It depends almost entirely on the mechanical condition. If the frame, drives, and tooling are sound and the machine still makes good parts, a retrofit typically runs a fraction of replacement cost, keeps a footprint your plant is already laid out for, and doesn't require retraining operators on new mechanics. If the mechanics are worn out or the process itself needs to change, a retrofit is money spent on a machine that will still be limited afterward — and we'll tell you that during the survey." },
+        { "q": "We have no drawings for this machine. Can you still do it?", "a": "Yes, and it's extremely common. Part of the survey is reverse engineering what's actually installed rather than what someone thinks is installed. You end up with a complete AutoCAD package — frequently the first accurate documentation the machine has ever had, which is worth something on its own the next time anything goes wrong." },
+        { "q": "How long will my line actually be down?", "a": "For most retrofits, one planned weekend or maintenance window. That's achievable because the panel is built and the code is written and simulated before anyone touches your machine. We commit to a downtime window in the quote rather than discovering it during the shutdown — and if a machine can't be done in a weekend, you'll hear that before you sign, not after." },
+        { "q": "Can you write recipes for different products?", "a": "Yes, and it's usually one of the biggest practical wins of a retrofit. Instead of an operator dialing in settings from memory or a laminated sheet, product parameters get stored, named, version-controlled, and recalled from the HMI. Changeover gets faster and far more repeatable, and it removes a common source of scrap." },
+        { "q": "Do you do the field wiring, or do we hire an electrician?", "a": "We do it. Our technicians handle on-site wiring, integration, and startup, which matters more than it sounds — when the people who designed the panel are the ones landing the wires, problems get solved on the spot instead of turning into a scheduling conversation between two vendors." },
+        { "q": "What if we already built the machine ourselves?", "a": "That's Path B, and it's a large share of our work. Send us the mechanical system and a description of how it should behave, and we handle the electrical design, panel, programming, recipes, and field integration. You don't need a written spec to start — a walkthrough of the machine is usually enough." }
+      ]
+    },
+    {
+      "type": "rfq",
+      "id": "rfq",
+      "kicker": "Request an assessment",
+      "heading": "Send a photo of the panel. That's genuinely enough to start.",
+      "intro": "Most retrofit conversations begin with someone photographing the inside of an old control cabinet on their phone. If you can add any of the below, the assessment gets sharper.",
+      "checklist": [
+        { "title": "Photos of the existing panel and machine", "hint": "Door open, plus a wide shot of the machine" },
+        { "title": "PLC and drive part numbers", "hint": "Read them off the labels — that alone tells us a lot" },
+        { "title": "Any drawings you have", "hint": "Even incomplete or marked-up ones from decades ago" },
+        { "title": "What the machine does", "hint": "And what it's supposed to do that it currently can't" },
+        { "title": "Products and changeovers", "hint": "How many recipes, how often you switch" },
+        { "title": "Acceptable downtime window", "hint": "Weekend, holiday shutdown, or fully scheduled" },
+        { "title": "Plant standards", "hint": "Preferred PLC brand and network, if you have one" }
+      ],
+      "form": {
+        "subject": "Retrofit assessment request",
+        "fields": [
+          { "name": "situation", "label": "Which describes your situation?", "type": "select", "options": ["Obsolete controls on a working machine", "Mechanical system built, needs controls", "Machine runs but needs new capability or recipes", "Controls failing intermittently", "Not sure — need an assessment"] },
+          [
+            { "name": "machine_length", "label": "Machine length", "type": "text", "placeholder": "approx. ft" },
+            { "name": "downtime_window", "label": "Downtime window", "type": "text", "placeholder": "weekend, shutdown…" }
+          ],
+          { "name": "message", "label": "What's on the machine now", "type": "textarea", "rows": 4, "placeholder": "PLC and drive part numbers if you have them, what it does, what's failing…" },
+          { "name": "attachment", "label": "Attach panel photos or drawings", "type": "file" }
+        ],
+        "submitLabel": "Request assessment",
+        "note": "An engineer reviews it and calls you back. If the honest answer is that replacing the machine beats retrofitting it, we'll tell you that on the call."
+      }
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "slug": "control-panels",
+  "nav": { "label": "Control Panels" },
+  "seo": {
+    "title": "UL 508A Control Panel Design & Manufacturing in Brea, CA",
+    "description": "UL 508A listed control panel shop in Brea, California. Build to print, or full AutoCAD electrical design, Hoffman ModCenter enclosure machining, panel build and test, then PLC, HMI and drive programming and commissioning.",
+    "ogImage": null,
+    "dateModified": "2026-11-21"
+  },
+  "schema": {
+    "type": "Service",
+    "name": "UL 508A industrial control panel design and manufacturing",
+    "serviceType": "Industrial control panel manufacturing"
+  },
+  "titleBlock": [
+    { "text": "Capability", "bold": "01" },
+    { "text": "UL 508A Listed Shop — File", "bold": "[[#E______]]" },
+    { "text": "ISO", "bold": "[[9001:2015]]" },
+    { "text": "Hoffman", "bold": "ModCenter" },
+    { "text": "Brea, CA" },
+    { "text": "Rev", "bold": "2026.1" }
+  ],
+  "sections": [
+    {
+      "type": "hero",
+      "eyebrow": "Industrial Control Panels",
+      "title": "Built to your print.\nOr *engineered* from your process.",
+      "text": "We are a UL 508A listed panel shop in Brea, California with electrical and software engineers on staff. Send us a complete drawing package and we build to print. Send us a process and no drawings, and we do the electrical design in AutoCAD, modify the enclosure on our Hoffman Modification Center, build and test the panel, then write and commission the PLC, HMI, and drive code that runs it.",
+      "ctas": [
+        { "label": "Start an RFQ", "href": "#rfq", "style": "accent" },
+        { "label": "See capability specs", "href": "#specs", "style": "ghost" }
+      ],
+      "visual": {
+        "_editorNote": "Interactive 3D assembly from the client mockup. Delete this block to put the facts panel back on the right.",
+        "label": "Ram Automation / Brea",
+        "alt": "Illustration of a UL 508A control cabinet with HMI next to a six-axis robot arm and a machined part fixture",
+        "hint": "Drag to rotate",
+        "hotspots": [
+          { "part": "cabinet", "label": "Control panels", "href": "#specs", "side": "left" },
+          { "part": "robot", "label": "Automation machines", "href": "/automation-machines/" },
+          { "part": "harness", "label": "Wire harness", "href": "/wire-harness/", "side": "left" },
+          { "part": "fixture", "label": "Precision machining", "href": "https://www.ramaerospace.com/" }
+        ],
+        "tags": { "topRight": "UL 508A enclosure + robot cell", "bottomRight": "IPC/WHMA-A-620 harness · Hoffman ModCenter" }
+      },
+      "facts": {
+        "heading": "At a glance",
+        "items": [
+          { "term": "Build to print", "value": "[[4–6 weeks]]", "detail": "typical, stock components" },
+          { "term": "Design + build", "value": "[[8–12 weeks]]", "detail": "includes engineering" },
+          { "term": "Engineering", "value": "In house", "detail": "electrical + software" },
+          { "term": "Enclosure mod", "value": "In house", "detail": "Hoffman ModCenter" },
+          { "term": "Panel current", "value": "[[up to 1200 A]]" },
+          { "term": "SCCR", "value": "[[up to 65 kA]]" },
+          { "term": "Commissioning", "value": "Turnkey", "detail": "on site or remote" },
+          { "term": "Quote turnaround", "value": "[[2 business days]]" }
+        ]
+      }
+    },
+    {
+      "type": "paths",
+      "kicker": "Two ways to work with us",
+      "heading": "Pick the path that matches what you already have",
+      "intro": "Most panel shops quote the same way no matter what you send them. We don't — because the two jobs carry very different risk, and you should only pay for the engineering you actually need.",
+      "cards": [
+        {
+          "tag": "Path A",
+          "title": "Build to print",
+          "text": "You have a released drawing package and a bill of materials. We fabricate, wire, label, test, and apply the UL 508A label. No design charges.",
+          "lists": [
+            { "heading": "You send", "items": ["Schematics and panel layout", "Bill of materials with part numbers", "Enclosure rating and dimensions", "Quantity and required date"] },
+            { "heading": "You get back", "items": ["Tested panel with UL 508A label", "As-built drawings and test report", "Component traceability records"] }
+          ]
+        },
+        {
+          "tag": "Path B",
+          "title": "Design, build and commission",
+          "accent": true,
+          "text": "You have a process, a machine, or a problem — not a drawing set. Our electrical and software engineers do the design in AutoCAD, size and derate the components, build the panel, then write and commission the code that runs it.",
+          "lists": [
+            { "heading": "You send", "items": ["Load list or equipment being controlled", "I/O count and sequence of operation", "Environment: indoor, washdown, hazardous", "Preferred PLC and network, if you have one"] },
+            { "heading": "You get back", "items": ["Everything in Path A, plus", "AutoCAD schematics, one-lines, BOM, heat and SCCR calculations", "PLC, HMI and drive code — written, tested, unlocked", "On-site commissioning and operator training"] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "trio",
+      "eyebrow": "Nothing subcontracted",
+      "heading": "Drawing, metal, and code —\nall of it happens here",
+      "intro": "Most panel shops do one of these three well and buy the other two. That's why schedules slip: the enclosure comes back from a fab shop cut wrong, or the panel is finished and then sits waiting on a programmer who has never seen it. We do all three in this building, and the same people stay on your job from the first drawing to the day it runs.",
+      "columns": [
+        {
+          "label": "Discipline 01",
+          "title": "Electrical design",
+          "text": "Electrical engineers on staff producing a released drawing package you own — not a marked-up sketch handed to the floor.",
+          "items": ["AutoCAD Electrical schematics", "One-line and power distribution", "Panel layout and wire routing", "Component sizing and derating", "Heat rise calculations", "SCCR per UL 508A Supp. SB", "Bill of materials"]
+        },
+        {
+          "label": "Discipline 02",
+          "title": "Software & commissioning",
+          "text": "Software engineers who write the code, prove it on the bench against your sequence, then commission it on your floor.",
+          "items": ["PLC programming, multi-platform", "HMI development and screens", "VFD and servo setup and tuning", "EtherCAT", "EtherNet/IP", "PROFINET / PROFIBUS", "Modbus TCP and RTU", "On-site startup and training"]
+        },
+        {
+          "label": "Discipline 03",
+          "title": "Enclosure fabrication",
+          "text": "A Hoffman Modification Center in house, so cutouts are machined to the drawing instead of hole-sawed at a bench.",
+          "items": ["Hoffman Modification Center", "CNC cutouts and knockouts", "Drilling and tapping", "Back panel fabrication", "Legend and nameplate engraving", "Enclosure rating preserved", "Precision CNC via Ram Aerospace"]
+        }
+      ],
+      "note": "Modifying an enclosure incorrectly voids its NEMA rating. Machining it on a ModCenter to the released drawing is how the rating survives the modification."
+    },
+    { "type": "divider" },
+    {
+      "type": "datasheet",
+      "id": "specs",
+      "kicker": "Datasheet",
+      "heading": "Capability specifications",
+      "intro": "The numbers engineers ask for on the first call. If your requirement sits outside a range below, say so in the RFQ — several of these are soft limits.",
+      "caption": "Control panel capability — Rev 2026.1",
+      "columns": ["Parameter", "Capability", "Notes"],
+      "monoColumns": [1],
+      "rows": [
+        ["Listing", "UL 508A, UL 698A", "Label applied in-house; no field evaluation needed"],
+        ["Panel ampacity", "[[Up to 1200 A]]", "Larger available as a multi-section lineup"],
+        ["Short circuit rating", "[[Up to 65 kA SCCR]]", "Calculated per UL 508A Supplement SB"],
+        ["Voltage", "120 / 208 / 240 / 480 / 600 VAC · 24 VDC", "Single and three phase"],
+        ["Enclosure types", "NEMA 1, 3R, 4, 4X, 12", "Painted steel, 304/316 stainless, non-metallic"],
+        ["Electrical design", "AutoCAD Electrical — in house", "Schematics, one-lines, layouts, BOM; drawings delivered to you"],
+        ["Enclosure modification", "Hoffman Modification Center", "CNC cutouts, drilling, tapping, engraving — rating preserved"],
+        ["PLC platforms", "Allen-Bradley, Siemens, Omron, Beckhoff, Mitsubishi", "Migrations from legacy PLC-5, SLC 500, S5"],
+        ["HMI / SCADA", "FactoryTalk, WinCC, Ignition", "Source code delivered unlocked"],
+        ["Industrial networks", "EtherCAT, EtherNet/IP, PROFINET, PROFIBUS, Modbus TCP/RTU", "Multi-protocol architectures and gateway integration"],
+        ["Drives", "VFD and servo — programmed, tuned, commissioned", "Line reactors and harmonic filters sized in house"],
+        ["Commissioning", "Turnkey, on site or remote", "Startup, tuning, operator and maintenance training"],
+        ["Internal wiring", "IPC/WHMA-A-620 Class 2", "Built by our own harness shop — see [Wire Harness](/wire-harness/)"],
+        ["Testing", "100% point-to-point + powered functional test", "Hi-pot and continuity records included"],
+        ["Volume", "1 to [[250+]] units", "One-off prototypes through repeat OEM production"],
+        ["Precision machining", "In-house CNC", "Milling, turning, grinding via Ram Aerospace"]
+      ]
+    },
+    {
+      "type": "steps",
+      "flushTop": true,
+      "kicker": "Sequence",
+      "heading": "How a panel job runs",
+      "intro": "Five stages. You get a named contact and a scheduled checkpoint at each one — not a quote and then silence until shipping.",
+      "items": [
+        { "label": "Stage 01", "title": "Quote", "text": "We review your package, flag anything that will drive cost or lead time, and quote with a fixed component list.", "time": "[[2 business days]]" },
+        { "label": "Stage 02", "title": "Engineering", "text": "AutoCAD schematics, layout, heat rise, SCCR, and BOM by our own electrical engineers. You approve drawings before we cut metal.", "time": "[[1–3 weeks]] · Path B only" },
+        { "label": "Stage 03", "title": "Fabricate", "text": "Enclosure machined on our Hoffman ModCenter to the released drawing. Components ordered from authorized distributors only.", "time": "Varies by component" },
+        { "label": "Stage 04", "title": "Build and test", "text": "Wire, label, then 100% point-to-point check and a powered functional test running the actual PLC code against your sequence.", "time": "[[2–4 weeks]]" },
+        { "label": "Stage 05", "title": "Commission", "text": "Our software engineers start it up on your floor, tune the drives, and train your operators and maintenance team.", "time": "On site or remote" }
+      ]
+    },
+    { "type": "divider" },
+    {
+      "type": "proof",
+      "_editorNote": "Sample jobs from the client mockup. Replace with real jobs: name the industry, the problem, and one number the customer cared about.",
+      "kicker": "Selected work",
+      "heading": "What the panels actually did",
+      "intro": "Each one described by the industry, the problem, and the one number the customer cared about.",
+      "cards": [
+        { "tag": "Food & Beverage", "title": "Washdown line control retrofit", "text": "Replaced an obsolete relay panel on a bottling line with a NEMA 4X stainless panel and a modern PLC, cut over during a scheduled weekend shutdown.", "metric": { "value": "[[0 hrs]]", "label": "unplanned production loss" } },
+        { "tag": "OEM Machine Builder", "title": "Repeat production panels", "text": "Build-to-print panels for a machine builder shipping the same platform quarterly. Standardized BOM and kitted harnesses cut per-unit build time.", "metric": { "value": "[[32%]]", "label": "lower cost per unit by run 4" } },
+        { "tag": "Aerospace Supplier", "title": "Test stand control system", "text": "Designed and built the control panel, harnesses, and HMI for a component test stand, including data logging to the customer's quality system.", "metric": { "value": "[[9 weeks]]", "label": "concept to accepted on site" } }
+      ]
+    },
+    {
+      "type": "gallery",
+      "flushTop": true,
+      "kicker": "From the shop floor",
+      "heading": "Panels we've built",
+      "items": [
+        { "src": "/images/work/panels/03.jpg", "alt": "Large open control panel with rows of DIN-rail breakers, contactors and labeled terminal blocks", "width": 550, "height": 350 },
+        { "src": "/images/work/panels/05.jpg", "alt": "Allen-Bradley PowerFlex variable frequency drives mounted in a control panel", "width": 550, "height": 350 },
+        { "src": "/images/work/panels/06.jpg", "alt": "Close-up of fused disconnects, contactors and dressed wiring on a panel back plate", "width": 550, "height": 350 },
+        { "src": "/images/work/panels/04.jpg", "alt": "Stainless enclosure with door open showing pilot lights, selector switches and internal components", "width": 550, "height": 350 },
+        { "src": "/images/work/panels/01.jpg", "alt": "Rows of terminal blocks and relays with wire duct in a control panel under construction", "width": 550, "height": 350 },
+        { "src": "/images/work/panels/07.jpg", "alt": "Overhead view of a panel back plate with relays and wire duct laid out", "width": 550, "height": 350 }
+      ]
+    },
+    {
+      "type": "features",
+      "_editorNote": "Adapted from the 'Why Ram Automation' strip in the second client mockup. Confirm the Fortune 100 claim before launch.",
+      "kicker": "Why Ram Automation",
+      "heading": "Documentation is part of the deliverable",
+      "items": [
+        { "label": "Listing", "title": "UL 508A listed", "text": "Panels built and labeled under our own UL file, not just assembled from UL-recognized parts." },
+        { "label": "Handover", "title": "Full documentation", "text": "Unlocked PLC and HMI source, UL-approved schematics, CAD files and operator manuals, on every job." },
+        { "label": "Support", "title": "Remote diagnostics", "text": "Optional 24/7 remote login, so a fault gets diagnosed before it turns into a shutdown." },
+        { "label": "Customers", "title": "[[Fortune 100]] to startups", "text": "Quality processes built to meet customer-mandated standards at any project size." }
+      ]
+    },
+    {
+      "type": "tags",
+      "flushTop": true,
+      "heading": "Building for",
+      "items": [
+        "[Aerospace & defense](/industries/#aerospace-defense)",
+        "[Space & launch](/industries/#space-launch)",
+        "[Entertainment & theme park](/industries/#entertainment)",
+        "[Medical device](/industries/#medical-device)",
+        "[Food & beverage](/industries/#food-beverage)",
+        "[Semiconductor](/industries/#semiconductor)",
+        "[Industrial OEM](/industries/#industrial-oem)"
+      ]
+    },
+    {
+      "type": "stack",
+      "eyebrow": "Why buyers consolidate here",
+      "heading": "One purchase order.\nFour shops.",
+      "text": "Most panel builders subcontract their machining and buy their harnesses. When something doesn't fit, you're the one managing three vendors pointing at each other. We do all four in house — so the harness was built for that panel, and the back panel was cut for that enclosure.",
+      "rows": [
+        { "label": "01", "title": "Control panels", "meta": "UL 508A listed shop", "href": "/control-panels/" },
+        { "label": "02", "title": "Automation machines", "meta": "Design, build, install", "href": "/automation-machines/" },
+        { "label": "03", "title": "Wire harness", "meta": "IPC/WHMA-A-620", "href": "/wire-harness/" },
+        { "label": "04", "title": "Retrofit & integration", "meta": "On-site field service", "href": "/retrofit-integration/" },
+        { "label": "05", "title": "Precision machining", "meta": "Ram Aerospace, CNC", "href": "https://www.ramaerospace.com/" }
+      ]
+    },
+    {
+      "type": "faq",
+      "kicker": "Questions we get weekly",
+      "heading": "Before you send the RFQ",
+      "items": [
+        { "q": "What actually drives the price of a control panel?", "a": "Components, almost always. The enclosure, drives, PLC, and safety devices typically make up the majority of the cost, and labor is a smaller share than most buyers expect. That's why we quote against a fixed component list — so you can see what's driving the number and decide whether a different drive or enclosure is worth the change." },
+        { "q": "Can you apply the UL label, or do I need a field evaluation?", "a": "We apply it. As a UL 508A listed shop we build under our own file and the panel ships with the label already on it. Field evaluations are what you need when a panel was built by someone who isn't listed, and they typically add cost and schedule per panel." },
+        { "q": "What is SCCR and why does my inspector care about it?", "a": "Short circuit current rating is the maximum fault current the panel can safely withstand. It has to be marked on the panel and it has to be at least as high as the available fault current at the point of installation. It's one of the most common reasons a panel gets red-tagged, so we calculate it during design rather than discovering it at startup." },
+        { "q": "Do you program the panel, or just build it?", "a": "Either. We have software engineers on staff, so we can deliver the panel with the PLC, HMI, and drive code written, tested on the bench, and commissioned on your floor. Plenty of customers do their own programming and just want the hardware — that's fine too, and it's quoted separately so you're not paying for engineering you don't need." },
+        { "q": "Which industrial networks can you work with?", "a": "EtherCAT, EtherNet/IP, PROFINET, PROFIBUS, and Modbus TCP and RTU, including mixed architectures where a machine has to talk to equipment on more than one protocol. If your plant standard is one network and a piece of vendor equipment arrives on another, that's a routine problem here rather than a change order." },
+        { "q": "Do I own the PLC program?", "a": "Yes. Source code is delivered unlocked and documented along with schematics, CAD files, and the operator manual. You are not required to come back to us to make a change — though we're happy to be the ones who do it." },
+        { "q": "Will you build from drawings another shop produced?", "a": "Yes, that's Path A. We'll review the package first and tell you if we see anything that won't pass UL or won't work as drawn, but we don't require you to pay us to redraw someone else's design." }
+      ]
+    },
+    {
+      "type": "rfq",
+      "id": "rfq",
+      "kicker": "Request a quote",
+      "heading": "Send this and you'll get a real number, not a range",
+      "intro": "Every item below is optional. But the more boxes you can tick, the tighter the quote — and the fewer rounds of email it takes to get there.",
+      "checklist": [
+        { "title": "Schematics or a one-line diagram", "hint": "PDF, DWG, or a photo of the existing panel is fine" },
+        { "title": "Bill of materials", "hint": "Or just tell us your preferred PLC and drive brands" },
+        { "title": "I/O count", "hint": "Rough is fine — 24 in / 16 out gets us close" },
+        { "title": "Enclosure rating and mounting", "hint": "Indoor, washdown, outdoor, hazardous location" },
+        { "title": "Available fault current at the install point", "hint": "Needed for the SCCR calculation" },
+        { "title": "Who writes the code", "hint": "You, us, or undecided — it changes the quote substantially" },
+        { "title": "Network and plant standard", "hint": "EtherNet/IP, EtherCAT, PROFINET, Modbus, or mixed" },
+        { "title": "Quantity and required date", "hint": "Tell us if this is a one-off or a repeat build" }
+      ],
+      "form": {
+        "subject": "Control panel RFQ",
+        "fields": [
+          { "name": "path", "label": "Which path fits?", "type": "radio", "options": [
+            { "value": "Path A — Build to print", "hint": "Schematics and BOM ready for review" },
+            { "value": "Path B — Design, build and commission", "hint": "Process or sequence only, engineering required" },
+            { "value": "Not sure yet", "hint": "Send what you have and we'll tell you" }
+          ] },
+          [
+            { "name": "programming", "label": "Programming", "type": "select", "options": ["You write the code", "We write the code", "Undecided"] },
+            { "name": "network", "label": "Network", "type": "select", "options": ["EtherNet/IP", "EtherCAT", "PROFINET", "Modbus", "Mixed / other", "Not specified"] }
+          ],
+          [
+            { "name": "quantity", "label": "Quantity", "type": "text", "placeholder": "1" },
+            { "name": "required_date", "label": "Required date", "type": "text", "placeholder": "MM/YYYY" }
+          ],
+          { "name": "message", "label": "Tell us about the panel", "type": "textarea", "rows": 4, "placeholder": "Equipment being controlled, environment, I/O count, PLC preference…" },
+          { "name": "attachment", "label": "Attach drawings or photos", "type": "file" }
+        ],
+        "submitLabel": "Send RFQ",
+        "note": "An engineer reviews every RFQ. You'll hear back within [[2 business days]] — and if we're not the right shop for it, we'll tell you that too."
+      }
+    }
+  ]
+}

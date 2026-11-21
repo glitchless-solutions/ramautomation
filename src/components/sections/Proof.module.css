@@ -1,0 +1,48 @@
+.proof {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 22px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+.tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 16px;
+}
+.card h3 {
+  font-size: 20px;
+}
+.card p {
+  font-size: 14.5px;
+  color: var(--muted);
+  margin: 0 0 22px;
+  flex-grow: 1;
+}
+.metric {
+  border-top: 2px solid var(--accent);
+  padding-top: 14px;
+}
+.value {
+  font-family: var(--disp);
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+.label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 5px;
+}

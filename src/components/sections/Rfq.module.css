@@ -1,0 +1,254 @@
+.rfq {
+  background: var(--paper-2);
+  border-top: 3px solid var(--accent);
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+}
+.intro {
+  color: var(--muted);
+}
+.check {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0;
+}
+.check li {
+  padding: 11px 0 11px 30px;
+  border-bottom: 1px solid var(--rule-soft);
+  position: relative;
+  font-size: 15px;
+}
+.check li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 13px;
+  height: 13px;
+  border: 1.5px solid var(--steel);
+  border-radius: 2px;
+}
+.check li span {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.form {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--slate);
+  padding: 30px;
+  align-self: start;
+}
+.field {
+  margin-bottom: 18px;
+}
+.field label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid var(--silver);
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 15px;
+  border-radius: var(--radius);
+}
+/* drop zone (field type "file") */
+.drop {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 22px 16px;
+  border: 1.5px dashed var(--silver);
+  border-radius: var(--radius);
+  background: var(--paper-2);
+  color: var(--steel);
+  text-align: center;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+.drop:hover,
+.dropOver {
+  border-color: var(--accent);
+  background: rgba(244, 126, 31, 0.06);
+  color: var(--accent-text);
+}
+.drop:focus-within {
+  outline: 2px solid var(--slate);
+  outline-offset: 1px;
+}
+.field .drop input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.drop strong {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.drop small {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+.files {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  font-family: var(--mono);
+  font-size: 12px;
+}
+.files li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.files li span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.files li span:last-child {
+  color: var(--muted);
+  flex: none;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid var(--slate);
+  outline-offset: 1px;
+  border-color: var(--slate);
+}
+
+/* radio-card group (field type "radio") */
+.radios {
+  border: 0;
+  padding: 0;
+  margin: 0 0 18px;
+  min-width: 0;
+  display: grid;
+  gap: 8px;
+}
+.radios legend {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0;
+  margin: 0 0 6px;
+}
+.field .radio {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  margin: 0;
+  border: 1px solid var(--silver);
+  border-radius: var(--radius);
+  background: var(--white);
+  cursor: pointer;
+  font-family: var(--body);
+  font-size: 14.5px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+  transition: border-color 0.15s ease;
+}
+.field .radio:hover {
+  border-color: var(--slate);
+}
+.field .radio:has(input:checked) {
+  border-color: var(--accent);
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+.field .radio input {
+  width: auto;
+  margin: 3px 0 0;
+  accent-color: var(--accent);
+  flex: none;
+}
+.radio strong {
+  display: block;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.radio small {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.status {
+  min-height: 1em;
+  margin: 12px 0 0;
+  font-size: 14px;
+  color: var(--slate);
+}
+.status:empty {
+  margin: 0;
+}
+.error {
+  color: #a3261b;
+}
+.note {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  margin: 14px 0 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+}
+@media (max-width: 560px) {
+  .row2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .form {
+    padding: 22px 18px;
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "slug": "wire-harness",
+  "nav": { "label": "Wire Harness" },
+  "seo": {
+    "title": "IPC/WHMA-A-620 Wire Harness & Cable Assembly — Class 2 & 3",
+    "description": "Wire harness and cable assemblies built and inspected to IPC/WHMA-A-620 Class 2 and Class 3 in Brea, California. Prototypes from one piece, 100% continuity and hipot test, domestic build with no offshore subcontracting.",
+    "ogImage": null,
+    "dateModified": "2026-11-21"
+  },
+  "schema": {
+    "type": "Service",
+    "name": "IPC/WHMA-A-620 wire harness and cable assembly manufacturing",
+    "serviceType": "Wire harness and cable assembly manufacturing"
+  },
+  "titleBlock": [
+    { "text": "Capability", "bold": "03" },
+    { "text": "IPC/WHMA-A-620", "bold": "Rev E" },
+    { "text": "Class", "bold": "2 & 3" },
+    { "text": "Built in Brea, CA — USA" },
+    { "text": "Rev", "bold": "2026.1" }
+  ],
+  "sections": [
+    {
+      "type": "hero",
+      "eyebrow": "Wire Harness & Cable Assembly",
+      "title": "Every crimp inspected\nto a *published standard*.",
+      "text": "IPC/WHMA-A-620 is the industry consensus standard for cable and wire harness assemblies — it defines exactly what an acceptable crimp, solder joint, splice, and shield termination looks like. Our operators and inspectors are certified to it, so “good enough” is never a judgement call made at a bench.",
+      "ctas": [
+        { "label": "Request a quote", "href": "#rfq", "style": "accent" },
+        { "label": "Which class do I need?", "href": "#class", "style": "ghost" }
+      ],
+      "facts": {
+        "heading": "At a glance",
+        "items": [
+          { "term": "Standard", "value": "IPC/WHMA-A-620", "detail": "Rev E, Class 2 & 3" },
+          { "term": "Prototype turn", "value": "[[5–10 days]]" },
+          { "term": "Production lead", "value": "[[3–5 weeks]]" },
+          { "term": "Wire range", "value": "[[30 AWG – 2/0]]" },
+          { "term": "Minimum order", "value": "[[1 piece]]", "detail": "prototypes welcome" },
+          { "term": "Electrical test", "value": "100% continuity" }
+        ]
+      }
+    },
+    {
+      "type": "datasheet",
+      "id": "class",
+      "kicker": "Buyer's guide",
+      "heading": "Class 1, 2, or 3 — and why it changes your price",
+      "intro": "This is the single most common source of quote-to-quote confusion in harness buying. Two shops can quote the same drawing and be 40% apart simply because they assumed different classes. Here's what each one actually means so you can specify it deliberately.",
+      "caption": "IPC/WHMA-A-620 product classes",
+      "columns": ["", "Class 1", "Class 2", "Class 3"],
+      "rows": [
+        ["Intent", { "text": "General electronic", "style": "class" }, { "text": "Dedicated service", "style": "class" }, { "text": "High performance", "style": "class" }],
+        ["Plain English", "It needs to work", "It needs to keep working, and downtime matters", "It cannot fail, and it may be unrepairable in service"],
+        ["Typical use", "Consumer goods, low-cost equipment", "Industrial machinery, control panels, automotive, telecom", "Aerospace, defense, medical, life support, space"],
+        ["Cosmetic defects", "Broadly tolerated", "Limited tolerance", "Tightest criteria in the standard"],
+        ["Inspection", "Basic", "Documented, sampled or 100%", "100%, with records retained"],
+        ["Relative cost", { "text": "Lowest", "style": "mono" }, { "text": "Baseline", "style": "mono" }, { "text": "[[Typically +25–60%]]", "style": "mono" }],
+        ["We build this", "On request", { "text": "✓ Standard", "style": "check" }, { "text": "✓ Standard", "style": "check" }]
+      ],
+      "note": "**Not sure?** Most industrial and control panel work is Class 2. If your harness goes into an aircraft, an implantable or life-supporting device, or a defense program, you are almost certainly Class 3 — and your customer's drawing usually says so. If it doesn't say, ask us before you buy on price."
+    },
+    { "type": "divider" },
+    {
+      "type": "datasheet",
+      "id": "specs",
+      "kicker": "Datasheet",
+      "heading": "Capability specifications",
+      "intro": "Check your drawing against this before you send it. Anything outside these ranges is still worth asking about — several are equipment limits we can work around.",
+      "caption": "Wire harness capability — Rev 2026.1",
+      "columns": ["Parameter", "Capability", "Notes"],
+      "monoColumns": [1],
+      "rows": [
+        ["Workmanship standard", "IPC/WHMA-A-620 Rev E", "Certified operators and inspectors (CIS / CIT)"],
+        ["Classes built", "Class 2 and Class 3", "Class 1 on request"],
+        ["Wire gauge range", "[[30 AWG to 2/0]]", "Automated cut, strip, and crimp"],
+        ["Terminations", "Crimp, solder, IDC, splice", "Hand soldering to J-STD-001"],
+        ["Crimp tooling", "Calibrated dies, applicator-based", "Molex, TE, Amphenol, Deutsch, JST"],
+        ["Crimp verification", "Pull test and periodic cross-section", "Records retained per lot"],
+        ["Connector types", "Circular, rectangular, D-sub, RJ, ring/spade", "MIL-spec circulars on Class 3 work"],
+        ["Coax & shielding", "Coax, twisted pair, braided and foil shields", "Shield termination and drain wire management"],
+        ["Protection", "Braid, convoluted, heat shrink, spiral wrap", "Molded and potted boots available"],
+        ["Marking", "Heat shrink labels, inkjet, hot stamp", "Serialization and date coding available"],
+        ["Electrical test", "100% continuity and hipot", "Test report shipped with every lot"],
+        ["Volume", "[[1 piece to 10,000+ / year]]", "Prototype through repeat production"],
+        ["Build location", "Brea, California", "Domestic build — no offshore subcontracting"]
+      ]
+    },
+    {
+      "type": "steps",
+      "flushTop": true,
+      "kicker": "Sequence",
+      "heading": "Prototype to production",
+      "intro": "The path most customers actually take. You should never commit to a production run before you've held a first article in your hand and fit it in the real assembly.",
+      "items": [
+        { "label": "Stage 01", "title": "Quote", "text": "Send a drawing, a wire list, or the harness you're replacing. We quote against a defined class and a fixed BOM.", "time": "[[2 business days]]" },
+        { "label": "Stage 02", "title": "Prototype", "text": "First articles built and tested. You fit them in the real assembly and tell us what to change.", "time": "[[5–10 days]]" },
+        { "label": "Stage 03", "title": "First article approval", "text": "Documented FAI against your drawing. Once approved, the build is locked and repeatable.", "time": "Your schedule" },
+        { "label": "Stage 04", "title": "Production", "text": "Boards and fixtures built for repeatability. 100% electrical test on every unit, records retained by lot.", "time": "[[3–5 weeks]]" },
+        { "label": "Stage 05", "title": "Repeat & stock", "text": "Blanket orders with scheduled releases, plus optional buffer stock so your line never waits on harnesses.", "time": "Ongoing" }
+      ]
+    },
+    { "type": "divider" },
+    {
+      "type": "proof",
+      "_editorNote": "Sample jobs from the client mockup. Replace with real jobs. For harness buyers, the persuasive numbers are usually defect rate, on-time delivery, and turnaround.",
+      "kicker": "Selected work",
+      "heading": "Harnesses we build",
+      "intro": "For harness buyers the numbers that matter are defect rate, on-time delivery, and turnaround — so that's what we report.",
+      "cards": [
+        { "tag": "Industrial OEM", "title": "Panel harness kits", "text": "Pre-built, labeled harness kits for a machine builder's repeat platform, delivered as kitted sets so panel build time drops on the customer's own floor.", "metric": { "value": "[[6 hrs]]", "label": "saved per panel build" } },
+        { "tag": "Aerospace / Class 3", "title": "Test equipment harnesses", "text": "Class 3 harnesses with MIL-spec circulars and shielded pairs for a ground test system, with full traceability and retained inspection records.", "metric": { "value": "[[0]]", "label": "field failures to date" } },
+        { "tag": "Medical Device", "title": "Prototype to production", "text": "Started with six prototype harnesses during design validation, then carried the same build documentation into a repeating production release.", "metric": { "value": "[[7 days]]", "label": "drawing to first article" } }
+      ]
+    },
+    {
+      "type": "gallery",
+      "hidden": true,
+      "_editorNote": "Hidden until harness photos exist. Add real photos (src/alt/width/height) in place of the placeholder items, then delete \"hidden\": true.",
+      "flushTop": true,
+      "kicker": "From the shop floor",
+      "heading": "Harnesses on the board",
+      "items": [
+        { "placeholder": "Harness board mid-build\nLayout and routing visible" },
+        { "placeholder": "Technician at the bench\nCrimping or inspecting" },
+        { "placeholder": "Finished harness kits\nLabeled and bagged by panel" }
+      ]
+    },
+    {
+      "type": "stack",
+      "eyebrow": "Why buyers consolidate here",
+      "heading": "The harness shop is\ndown the hall",
+      "text": "Most panel builders buy harnesses from someone else, and most harness shops have never wired a panel. We do both in the same building — which means the harness is designed around the panel it goes into, and when something needs to change, it changes the same day instead of after a two-week vendor loop.",
+      "rows": [
+        { "label": "01", "title": "Wire harness", "meta": "IPC/WHMA-A-620", "href": "/wire-harness/" },
+        { "label": "02", "title": "Control panels", "meta": "UL 508A listed shop", "href": "/control-panels/" },
+        { "label": "03", "title": "Automation machines", "meta": "Design, build, install", "href": "/automation-machines/" },
+        { "label": "04", "title": "Retrofit & integration", "meta": "On-site field service", "href": "/retrofit-integration/" },
+        { "label": "05", "title": "Precision machining", "meta": "Ram Aerospace, CNC", "href": "https://www.ramaerospace.com/" }
+      ]
+    },
+    {
+      "type": "faq",
+      "kicker": "Questions we get weekly",
+      "heading": "Before you send the drawing",
+      "items": [
+        { "q": "What does “IPC/WHMA-A-620 certified” actually mean?", "a": "It means our operators and inspectors have been trained and certified against the standard, and that we build and inspect to its published acceptance criteria rather than to in-house opinion. The standard was developed by IPC and the Wire Harness Manufacturers Association and is the industry consensus document for cable and harness assemblies. Certification is maintained through recertification, not earned once." },
+        { "q": "I don't have a drawing. Can you still quote?", "a": "Usually. Send the harness you're replacing, or a wire list with connector part numbers and lengths, and we can work from that. For anything going into production we'll produce a controlled drawing so future lots are built identically — you own that drawing." },
+        { "q": "Do you have a minimum order quantity?", "a": "No. We build single prototypes, and we'd rather you validate one before ordering a thousand. Per-unit price does drop meaningfully at volume, and we'll show you the price break points in the quote." },
+        { "q": "Why is another quote so much cheaper?", "a": "Nine times out of ten it's one of three things: a lower IPC class assumed, a cheaper connector or wire substituted, or the work is being built offshore. None of those are automatically wrong — but they should be a decision you made, not a surprise you discovered. Our quotes state the class and the exact BOM so you can compare like for like." },
+        { "q": "Do you test every harness?", "a": "Yes. 100% continuity test on every unit, with hipot where the application calls for it, and the test report ships with the lot. Crimps are pull-tested to the standard, and records are retained." }
+      ]
+    },
+    {
+      "type": "rfq",
+      "id": "rfq",
+      "kicker": "Request a quote",
+      "heading": "What to send for a same-week quote",
+      "intro": "You don't need all of it. A photo of the harness you're replacing plus a quantity is enough to start.",
+      "checklist": [
+        { "title": "Harness drawing or wire list", "hint": "PDF, DWG, or a spreadsheet of from-to connections" },
+        { "title": "Connector part numbers", "hint": "Manufacturer and full part number, including contacts" },
+        { "title": "Wire specification", "hint": "Gauge, insulation type, and any shielding requirements" },
+        { "title": "IPC class required", "hint": "Class 2 or 3 — if you're unsure, we'll help you decide" },
+        { "title": "Quantity and release schedule", "hint": "Prototype qty now, and expected annual usage" },
+        { "title": "Any customer or industry spec", "hint": "AS9100 flowdowns, ITAR, RoHS, UL recognition" }
+      ],
+      "form": {
+        "subject": "Wire harness RFQ",
+        "fields": [
+          { "name": "ipc_class", "label": "IPC class required", "type": "select", "options": ["Class 2 — industrial / commercial", "Class 3 — aerospace, medical, defense", "Class 1 — general electronic", "Not sure — help me decide"] },
+          [
+            { "name": "prototype_qty", "label": "Prototype qty", "type": "text", "placeholder": "1" },
+            { "name": "annual_usage", "label": "Annual usage", "type": "text", "placeholder": "est. units/year" }
+          ],
+          { "name": "message", "label": "Anything we should know", "type": "textarea", "rows": 4, "placeholder": "Application, environment, connector families, required specs…" },
+          { "name": "attachment", "label": "Attach drawing, wire list, or photos", "type": "file" }
+        ],
+        "submitLabel": "Send RFQ",
+        "note": "Quotes go out within [[2 business days]], stating the IPC class and the exact bill of materials — so you can compare it against any other quote line for line."
+      }
+    }
+  ]
+}
