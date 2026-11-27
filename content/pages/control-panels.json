@@ -31,7 +31,8 @@
         { "label": "See capability specs", "href": "#specs", "style": "ghost" }
       ],
       "visual": {
-        "_editorNote": "Interactive 3D assembly from the client mockup. Delete this block to put the facts panel back on the right.",
+        "_editorNote": "Interactive 3D assembly from the client mockup. \"hidden\": true keeps its space empty; set it to false to show the scene again. Delete this block to put the facts panel back on the right.",
+        "hidden": true,
         "label": "Ram Automation / Brea",
         "alt": "Illustration of a UL 508A control cabinet with HMI next to a six-axis robot arm and a machined part fixture",
         "hint": "Drag to rotate",

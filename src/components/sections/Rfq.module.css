@@ -25,11 +25,10 @@
   content: '';
   position: absolute;
   left: 0;
-  top: 15px;
-  width: 13px;
-  height: 13px;
-  border: 1.5px solid var(--steel);
-  border-radius: 2px;
+  top: 21px;
+  width: 12px;
+  height: 2px;
+  background: var(--accent);
 }
 .check li span {
   display: block;

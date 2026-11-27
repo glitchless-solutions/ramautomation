@@ -109,6 +109,13 @@
   align-items: center;
 }
 
+/* empty placeholder with the 3D frame's footprint (visual.hidden) */
+.visualSpace {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-height: 540px;
+}
+
 /* facts as a 4-up metric strip under the hero */
 .strip {
   margin-top: 48px;
@@ -143,6 +150,9 @@
 @media (max-width: 900px) {
   .withVisual {
     grid-template-columns: 1fr;
+  }
+  .visualSpace {
+    display: none;
   }
   .strip {
     margin-top: 36px;

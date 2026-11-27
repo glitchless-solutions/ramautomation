@@ -57,7 +57,15 @@ export default function Hero({ section }) {
           )}
         </div>
 
-        {visual ? <HeroScene visual={visual} /> : <Facts facts={facts} />}
+        {visual ? (
+          visual.hidden ? (
+            <div className={styles.visualSpace} aria-hidden="true" />
+          ) : (
+            <HeroScene visual={visual} />
+          )
+        ) : (
+          <Facts facts={facts} />
+        )}
       </div>
       {visual && (
         <div className="wrap">
